@@ -1,7 +1,7 @@
 # Flexible Inference Engine
 ### an effective deep learning accelerator for inference
 
-This project is about the deep learning accelerator. I will describe each sub-project in chronological order.
+This project is about implementing a deep learning accelerator. I will describe each sub-project in chronological order.
 
 ## AISimTiny
 This C++ project is a cycle by cycle accurate simulator of the inference engine. It enables a fast turnaround of exploring the architecture and experimenting with different parameters.  [This paper](data/FIE.pdf) provides a detailed description of the core architecture. The compiling environment for this project is Microsoft Visual Studio 2013. 
@@ -64,4 +64,4 @@ The final project is to implement the inference engine as a coprocessor of a RIS
 2. Then I used [freedom](https://github.com/sifive/freedom) (commit id 943ab4a) to generate the bitstream that can be used on Xilinx VC707 board.
 3. Finally, I used the system from the [keystone](https://github.com/keystone-enclave/keystone) project (commit id 500bc77) to build the embedded system that can boot and run on the riscv implemented on VC707. The file *deeprv/embedded OS/deeprv.c* is the kernel module for using the FIE accelerator, and the file *deeprv/embedded OS/example.c* is used to test the system. [The video](data/Record_booting.mp4) shows the booting part of the system, and [the video](data/Record_exec.mp4) shows how the kernel module is installed, and the test example program is executed. The test program generates the *deep.ot* file, and this file has been verified with the correct version.
 
-![riscv](data/rv.pvg)
+![riscv](data/rv.png)
