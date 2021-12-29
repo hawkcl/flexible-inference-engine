@@ -1,0 +1,1201 @@
+#--  Synopsys, Inc.
+#--  Version J-2015.03
+#--  Project file C:\AI\AIFPGA\sv\sv.srcs\sources_1\new\sv.prj
+
+#project files
+add_file -verilog -vlog_std sysv "pkg.sv"
+add_file -verilog -vlog_std sysv "readExtra.sv"
+add_file -verilog -vlog_std sysv "readFeatures.sv"
+add_file -verilog -vlog_std sysv "resFifo.sv"
+add_file -verilog -vlog_std sysv "SCG.sv"
+add_file -verilog -vlog_std sysv "sendBackUpInput.sv"
+add_file -verilog -vlog_std sysv "setupShiftInputs.sv"
+add_file -verilog -vlog_std sysv "startConvOut.sv"
+add_file -verilog -vlog_std sysv "UCL.sv"
+add_file -verilog -vlog_std sysv "UCU.sv"
+add_file -verilog -vlog_std sysv "weightFifo.sv"
+add_file -verilog -vlog_std sysv "assembleInput.sv"
+add_file -verilog -vlog_std sysv "BMWeightFifo.sv"
+add_file -verilog -vlog_std sysv "buildInputFifo.sv"
+add_file -verilog -vlog_std sysv "HCB.sv"
+add_file -verilog -vlog_std sysv "HCBCtrl.sv"
+add_file -verilog -vlog_std sysv "processConvOut.sv"
+add_file -verilog -vlog_std sysv "processInstruction.sv"
+add_file -verilog -vlog_std sysv "processNextFeatureLoading.sv"
+add_file -verilog -vlog_std sysv "processNextWeightLoading.sv"
+add_file -verilog -vlog_std sysv "../sim/cloud/cloud.sv"
+add_file -verilog -vlog_std sysv "ctrlread.sv"
+add_file -verilog -vlog_std sysv "assembleInputBuffer.sv"
+add_file -verilog -vlog_std sysv "GIB.sv"
+add_file -verilog -vlog_std sysv "ctrlwrite.sv"
+add_file -verilog -vlog_std sysv "ctrlweight.sv"
+add_file -verilog -vlog_std sysv "pushHCBInst.sv"
+add_file -verilog "../ip/dmem_32_16/dmem_32_16_stub.v"
+add_file -verilog "../ip/fifo_assemble_buffer/fifo_assemble_buffer_stub.v"
+add_file -verilog "../ip/fifo_bmweights/fifo_bmweights_stub.v"
+add_file -verilog "../ip/fifo_bool/fifo_bool_stub.v"
+add_file -verilog "../ip/fifo_InstructionHCB/fifo_InstructionHCB_stub.v"
+add_file -verilog "../ip/fifo_InstructionHCBWt/fifo_InstructionHCBWt_stub.v"
+add_file -verilog "../ip/fifo_resdata/fifo_resdata_stub.v"
+add_file -verilog "../ip/fifo_weights/fifo_weights_stub.v"
+add_file -verilog "../ip/inputs_mem/inputs_mem_stub.v"
+add_file -fpga_constraint "SCG.fdc"
+add_file -verilog -vlog_std sysv "../sim/interface/DDR.sv"
+add_file -verilog -vlog_std sysv "../sim/interface/if_test.sv"
+add_file -verilog "../ip/ctrlweight_mem/ctrlweight_mem_stub.v"
+add_file -verilog "../ip/fifo_addressBuffer/fifo_addressBuffer_stub.v"
+add_file -verilog "../ip/fifo_ctrlread_data/fifo_ctrlread_data_stub.v"
+add_file -verilog "../ip/fifo_ctrlread_req/fifo_ctrlread_req_stub.v"
+add_file -verilog "../ip/fifo_ctrlread_ret/fifo_ctrlread_ret_stub.v"
+add_file -verilog "../ip/fifo_ctrlweight_data/fifo_ctrlweight_data_stub.v"
+add_file -verilog "../ip/fifo_ctrlwrite_addr/fifo_ctrlwrite_addr_stub.v"
+add_file -verilog "../ip/fifo_ctrlwrite_data/fifo_ctrlwrite_data_stub.v"
+add_file -verilog "../ip/fifo_InstructionEnd/fifo_InstructionEnd_stub.v"
+add_file -verilog "../ip/fifo_InstructionRead/fifo_InstructionRead_stub.v"
+add_file -verilog "../ip/fifo_InstructionWeight/fifo_InstructionWeight_stub.v"
+add_file -verilog "../ip/fifo_InstructionWrite/fifo_InstructionWrite_stub.v"
+add_file -verilog "../ip/fifo_out_addrs_sizes/fifo_out_addrs_sizes_stub.v"
+add_file -verilog -vlog_std sysv "Token.sv"
+
+
+
+#implementation: "rev_2"
+impl -add rev_2 -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Virtex-UltraScale-FPGAs
+set_option -part XCVU095
+set_option -package FFVA1760
+set_option -speed_grade -3-e-es1
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 10000
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Virtex UltraScale FPGAs
+set_option -enable_prepacking 1
+set_option -use_vivado 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "rev_2/HCB.vm"
+
+#design plan options
+
+
+#implementation: "noS2"
+impl -add noS2 -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Kintex7
+set_option -part XC7K325T
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "HCB"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 1
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Kintex7
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "noS2/HCB.edf"
+
+#design plan options
+
+
+#implementation: "start_Convout"
+impl -add start_Convout -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "StartConvOut"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "start_Convout/HCB.edf"
+
+#design plan options
+
+
+#implementation: "readExtra"
+impl -add readExtra -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "ReadExtraWeights"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "readExtra/HCB.edf"
+
+#design plan options
+
+
+#implementation: "ReceiveResData"
+impl -add ReceiveResData -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "ReceiveResData"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "ReceiveResData/HCB.edf"
+
+#design plan options
+
+
+#implementation: "HCBCtrl"
+impl -add HCBCtrl -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -1
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "HCBCtrl"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "HCBCtrl/HCB.edf"
+
+#design plan options
+
+
+#implementation: "ReadFeatures"
+impl -add ReadFeatures -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "ReadFeatures"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "ReadFeatures/HCB.edf"
+
+#design plan options
+
+
+#implementation: "AssembleInput"
+impl -add AssembleInput -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "AssembleInput"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "AssembleInput/HCB.edf"
+
+#design plan options
+
+
+#implementation: "BuildInputFifo"
+impl -add BuildInputFifo -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "BuildInputFifo"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "BuildInputFifo/HCB.edf"
+
+#design plan options
+
+
+#implementation: "SCG"
+impl -add SCG -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#
+#implementation parameter settings
+set_option -hdl_param -set id 7
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "SCG"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 1
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "SCG/HCB.edf"
+
+#design plan options
+
+
+#implementation: "noS2_100"
+impl -add noS2_100 -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "HCB"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 1
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "noS2_100/HCB.edf"
+
+#design plan options
+
+
+#implementation: "noS2_100_cg15"
+impl -add noS2_100_cg15 -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "HCB"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 1
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "noS2_100_cg15/HCB.edf"
+
+#design plan options
+
+
+#implementation: "noS2_100_cg18"
+impl -add noS2_100_cg18 -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "HCB"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 1
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "noS2_100_cg18/HCB.edf"
+
+#design plan options
+
+
+#implementation: "processConvout"
+impl -add processConvout -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "ProcessConvOut"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "processConvout/HCB.edf"
+
+#design plan options
+
+
+#implementation: "processinstruction"
+impl -add processinstruction -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "cloud"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "processinstruction/HCB.edf"
+
+#design plan options
+
+
+#implementation: "cloud"
+impl -add cloud -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "Cloud"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 1
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "cloud/HCB.edf"
+
+#design plan options
+
+
+#implementation: "GIB"
+impl -add GIB -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std sysv
+set_option -project_relative_includes 1
+
+#par_1 attributes
+set_option -job par_1 -add par
+
+#device options
+set_option -technology Zynq
+set_option -part XC7Z100
+set_option -package FFG900
+set_option -speed_grade -2
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "GIB"
+
+# mapper_options
+set_option -frequency auto
+set_option -write_verilog 1
+set_option -write_vhdl 0
+set_option -srs_instrumentation 1
+
+# xilinx_options
+set_option -rw_check_on_ram 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 200
+set_option -disable_io_insertion 1
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fix_gated_and_generated_clocks 1
+
+# Xilinx Zynq
+set_option -use_vivado 1
+set_option -enable_prepacking 1
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+set_option -fpga_constraint ""
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "GIB/HCB.edf"
+
+#design plan options
+impl -active "readExtra"

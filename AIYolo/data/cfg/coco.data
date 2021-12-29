@@ -1,0 +1,8 @@
+classes= 80
+train  = /home/lei/work/darknet-master/cocodata/trainvalno5k.txt
+valid  = /home/lei/work/darknet-master/cocodata/5k.txt
+#valid = data/coco_val_5k.list
+names = data/coco.names
+backup = /home/lei/work/backup/
+eval=coco
+

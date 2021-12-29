@@ -1,0 +1,1 @@
+data/coco.data data/coco.names data/yolo.net data/yolov3.weights data/dog.jpg out.jpg 10 10

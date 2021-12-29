@@ -1,0 +1,1 @@
+data/coco.data data/coco.names data/tiny.net data/yolov3-tiny.weights data/ 7 16

@@ -1,0 +1,45 @@
+
+###==== BEGIN Header
+
+# Synopsys, Inc. constraint file
+# C:\AI\AIFPGA\sv\sv.srcs\sources_1\new\SCG.fdc
+# Written on Sat Mar 30 00:36:05 2019
+# by Synplify Premier with Design Planner, J-2015.03 FDC Constraint Editor
+
+# Custom constraint commands may be added outside of the SCOPE tab sections bounded with BEGIN/END.
+# These sections are generated from SCOPE spreadsheet tabs.
+
+###==== END Header
+
+###==== BEGIN Collections - (Populated from tab in SCOPE, do not edit)
+###==== END Collections
+
+###==== BEGIN Clocks - (Populated from tab in SCOPE, do not edit)
+create_clock  -name {clock} {p:clock} -period {5}
+
+###==== END Clocks
+
+###==== BEGIN "Generated Clocks" - (Populated from tab in SCOPE, do not edit)
+###==== END "Generated Clocks"
+
+###==== BEGIN Inputs/Outputs - (Populated from tab in SCOPE, do not edit)
+###==== END Inputs/Outputs
+
+###==== BEGIN Registers - (Populated from tab in SCOPE, do not edit)
+###==== END Registers
+
+###==== BEGIN "Delay Paths" - (Populated from tab in SCOPE, do not edit)
+###==== END "Delay Paths"
+
+###==== BEGIN Attributes - (Populated from tab in SCOPE, do not edit)
+###==== END Attributes
+
+###==== BEGIN "I/O Standards" - (Populated from tab in SCOPE, do not edit)
+###==== END "I/O Standards"
+
+###==== BEGIN "Compile Points" - (Populated from tab in SCOPE, do not edit)
+###==== END "Compile Points"
+
+
+
+

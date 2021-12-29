@@ -1,0 +1,114 @@
+if (out_data->cb_inst[Id].Id->aval != Id)
+	printf("\t cb_inst_%d.Id %d vs %d\n", Id, out_data->cb_inst[Id].Id->aval, Id);
+if (out_data->cb_inst[Id].itype->aval != itype)
+	printf("\t cb_inst_%d.itype %d vs %d\n", Id, out_data->cb_inst[Id].itype->aval, itype);
+if (out_data->cb_inst[Id].reqSeqNum->aval != reqSeqNum)
+	printf("\t cb_inst_%d.reqSeqNum %d vs %d\n", Id, out_data->cb_inst[Id].reqSeqNum->aval, reqSeqNum);
+if (out_data->cb_inst[Id].reqProgress->aval != reqProgress)
+	printf("\t cb_inst_%d.reqProgress %d vs %d\n", Id, out_data->cb_inst[Id].reqProgress->aval, reqProgress);
+if (out_data->cb_inst[Id].reqSeqNumW->aval != reqSeqNumW)
+	printf("\t cb_inst_%d.reqSeqNumW %d vs %d\n", Id, out_data->cb_inst[Id].reqSeqNumW->aval, reqSeqNumW);
+if (out_data->cb_inst[Id].reqProgressW->aval != reqProgressW)
+	printf("\t cb_inst_%d.reqProgressW %d vs %d\n", Id, out_data->cb_inst[Id].reqProgressW->aval, reqProgressW);
+if (out_data->cb_inst[Id].seqNum->aval != seqNum)
+	printf("\t cb_inst_%d.seqNum %d vs %d\n", Id, out_data->cb_inst[Id].seqNum->aval, seqNum);
+if (out_data->cb_inst[Id].W->aval != W)
+	printf("\t cb_inst_%d.W %d vs %d\n", Id, out_data->cb_inst[Id].W->aval, W);
+if (out_data->cb_inst[Id].H->aval != H)
+	printf("\t cb_inst_%d.H %d vs %d\n", Id, out_data->cb_inst[Id].H->aval, H);
+if (out_data->cb_inst[Id].C->aval != C)
+	printf("\t cb_inst_%d.C %d vs %d\n", Id, out_data->cb_inst[Id].C->aval, C);
+if (out_data->cb_inst[Id].Waddr->aval != Waddr)
+	printf("\t cb_inst_%d.Waddr %d vs %d\n", Id, out_data->cb_inst[Id].Waddr->aval, Waddr);
+if (out_data->cb_inst[Id].WEnd->aval != WEnd)
+	printf("\t cb_inst_%d.WEnd %d vs %d\n", Id, out_data->cb_inst[Id].WEnd->aval, WEnd);
+if (out_data->cb_inst[Id].weightPos->aval != weightPos)
+	printf("\t cb_inst_%d.weightPos %d vs %d\n", Id, out_data->cb_inst[Id].weightPos->aval, weightPos);
+if (out_data->cb_inst[Id].ReadPos->aval != ReadPos)
+	printf("\t cb_inst_%d.ReadPos %d vs %d\n", Id, out_data->cb_inst[Id].ReadPos->aval, ReadPos);
+if (out_data->cb_inst[Id].ResPos->aval != ResPos)
+	printf("\t cb_inst_%d.ResPos %d vs %d\n", Id, out_data->cb_inst[Id].ResPos->aval, ResPos);
+if (out_data->cb_inst[Id].W1->aval != W1)
+	printf("\t cb_inst_%d.W1 %d vs %d\n", Id, out_data->cb_inst[Id].W1->aval, W1);
+if (out_data->cb_inst[Id].H1->aval != H1)
+	printf("\t cb_inst_%d.H1 %d vs %d\n", Id, out_data->cb_inst[Id].H1->aval, H1);
+if (out_data->cb_inst[Id].X->aval != X)
+	printf("\t cb_inst_%d.X %d vs %d\n", Id, out_data->cb_inst[Id].X->aval, X);
+if (out_data->cb_inst[Id].Y->aval != Y)
+	printf("\t cb_inst_%d.Y %d vs %d\n", Id, out_data->cb_inst[Id].Y->aval, Y);
+if (out_data->cb_inst[Id].S->aval != S)
+	printf("\t cb_inst_%d.S %d vs %d\n", Id, out_data->cb_inst[Id].S->aval, S);
+if (out_data->cb_inst[Id].lPad->aval != lPad)
+	printf("\t cb_inst_%d.lPad %d vs %d\n", Id, out_data->cb_inst[Id].lPad->aval, lPad);
+if (out_data->cb_inst[Id].rPad->aval != rPad)
+	printf("\t cb_inst_%d.rPad %d vs %d\n", Id, out_data->cb_inst[Id].rPad->aval, rPad);
+if (out_data->cb_inst[Id].K->aval != K)
+	printf("\t cb_inst_%d.K %d vs %d\n", Id, out_data->cb_inst[Id].K->aval, K);
+if (out_data->cb_inst[Id].M->aval != M)
+	printf("\t cb_inst_%d.M %d vs %d\n", Id, out_data->cb_inst[Id].M->aval, M);
+if (out_data->cb_inst[Id].Kh->aval != Kh)
+	printf("\t cb_inst_%d.Kh %d vs %d\n", Id, out_data->cb_inst[Id].Kh->aval, Kh);
+if (out_data->cb_inst[Id].Ks->aval != Ks)
+	printf("\t cb_inst_%d.Ks %d vs %d\n", Id, out_data->cb_inst[Id].Ks->aval, Ks);
+if (out_data->cb_inst[Id].Kt->aval != Kt)
+	printf("\t cb_inst_%d.Kt %d vs %d\n", Id, out_data->cb_inst[Id].Kt->aval, Kt);
+if (out_data->cb_inst[Id].Res_addr->aval != Res_addr)
+	printf("\t cb_inst_%d.Res_addr %d vs %d\n", Id, out_data->cb_inst[Id].Res_addr->aval, Res_addr);
+if (out_data->cb_inst[Id].wScale->aval != wScale)
+	printf("\t cb_inst_%d.wScale %d vs %d\n", Id, out_data->cb_inst[Id].wScale->aval, wScale);
+if (out_data->cb_inst[Id].fScale->aval != fScale)
+	printf("\t cb_inst_%d.fScale %d vs %d\n", Id, out_data->cb_inst[Id].fScale->aval, fScale);
+if (out_data->cb_inst[Id].BM_addr->aval != BM_addr)
+	printf("\t cb_inst_%d.BM_addr %d vs %d\n", Id, out_data->cb_inst[Id].BM_addr->aval, BM_addr);
+if (out_data->cb_inst[Id].wLRelu->aval != wLRelu)
+	printf("\t cb_inst_%d.wLRelu %d vs %d\n", Id, out_data->cb_inst[Id].wLRelu->aval, wLRelu);
+if (out_data->cb_inst[Id].weightToken->aval != weightToken)
+	printf("\t cb_inst_%d.weightToken %d vs %d\n", Id, out_data->cb_inst[Id].weightToken->aval, weightToken);
+if (out_data->cb_inst[Id].maxpool_size->aval != maxpool_size)
+	printf("\t cb_inst_%d.maxpool_size %d vs %d\n", Id, out_data->cb_inst[Id].maxpool_size->aval, maxpool_size);
+if (out_data->cb_inst[Id].maxpool_stride->aval != maxpool_stride)
+	printf("\t cb_inst_%d.maxpool_stride %d vs %d\n", Id, out_data->cb_inst[Id].maxpool_stride->aval, maxpool_stride);
+if (out_data->cb_inst[Id].mode->aval != mode)
+	printf("\t cb_inst_%d.mode %d vs %d\n", Id, out_data->cb_inst[Id].mode->aval, mode);
+if (out_data->cb_inst[Id].outbufsize->aval != outbufsize)
+	printf("\t cb_inst_%d.outbufsize %d vs %d\n", Id, out_data->cb_inst[Id].outbufsize->aval, outbufsize);
+if (out_data->cb_inst[Id].ofsize->aval != ofsize)
+	printf("\t cb_inst_%d.ofsize %d vs %d\n", Id, out_data->cb_inst[Id].ofsize->aval, ofsize);
+if (out_data->cb_inst[Id].outyx->aval != outyx)
+	printf("\t cb_inst_%d.outyx %d vs %d\n", Id, out_data->cb_inst[Id].outyx->aval, outyx);
+if (out_data->cb_inst[Id].outputAddrGap->aval != outputAddrGap)
+	printf("\t cb_inst_%d.outputAddrGap %d vs %d\n", Id, out_data->cb_inst[Id].outputAddrGap->aval, outputAddrGap);
+if (out_data->cb_inst[Id].outkh->aval != outkh)
+	printf("\t cb_inst_%d.outkh %d vs %d\n", Id, out_data->cb_inst[Id].outkh->aval, outkh);
+if (out_data->cb_inst[Id].ng->aval != ng)
+	printf("\t cb_inst_%d.ng %d vs %d\n", Id, out_data->cb_inst[Id].ng->aval, ng);
+if (out_data->cb_inst[Id].gu->aval != gu)
+	printf("\t cb_inst_%d.gu %d vs %d\n", Id, out_data->cb_inst[Id].gu->aval, gu);
+if (out_data->cb_inst[Id].resSize->aval != resSize)
+	printf("\t cb_inst_%d.resSize %d vs %d\n", Id, out_data->cb_inst[Id].resSize->aval, resSize);
+if (out_data->cb_inst[Id].resSizeLast->aval != resSizeLast)
+	printf("\t cb_inst_%d.resSizeLast %d vs %d\n", Id, out_data->cb_inst[Id].resSizeLast->aval, resSizeLast);
+if (out_data->cb_inst[Id].resLen->aval != resLen)
+	printf("\t cb_inst_%d.resLen %d vs %d\n", Id, out_data->cb_inst[Id].resLen->aval, resLen);
+if (out_data->cb_inst[Id].resLenLast->aval != resLenLast)
+	printf("\t cb_inst_%d.resLenLast %d vs %d\n", Id, out_data->cb_inst[Id].resLenLast->aval, resLenLast);
+if (out_data->cb_inst[Id].pfs->aval != pfs)
+	printf("\t cb_inst_%d.pfs %d vs %d\n", Id, out_data->cb_inst[Id].pfs->aval, pfs);
+if (out_data->cb_inst[Id].volumeSize->aval != volumeSize)
+	printf("\t cb_inst_%d.volumeSize %d vs %d\n", Id, out_data->cb_inst[Id].volumeSize->aval, volumeSize);
+if (out_data->cb_inst[Id].kCurLast->aval != kCurLast)
+	printf("\t cb_inst_%d.kCurLast %d vs %d\n", Id, out_data->cb_inst[Id].kCurLast->aval, kCurLast);
+if (out_data->cb_inst[Id].wtotal_n->aval != wtotal_n)
+	printf("\t cb_inst_%d.wtotal_n %d vs %d\n", Id, out_data->cb_inst[Id].wtotal_n->aval, wtotal_n);
+if (out_data->cb_inst[Id].wtotalLast->aval != wtotalLast)
+	printf("\t cb_inst_%d.wtotalLast %d vs %d\n", Id, out_data->cb_inst[Id].wtotalLast->aval, wtotalLast);
+if (out_data->cb_inst[Id].wlenk_regular->aval != wlenk_regular)
+	printf("\t cb_inst_%d.wlenk_regular %d vs %d\n", Id, out_data->cb_inst[Id].wlenk_regular->aval, wlenk_regular);
+if (out_data->cb_inst[Id].wlenk_nLast->aval != wlenk_nLast)
+	printf("\t cb_inst_%d.wlenk_nLast %d vs %d\n", Id, out_data->cb_inst[Id].wlenk_nLast->aval, wlenk_nLast);
+if (out_data->cb_inst[Id].wlenk_nLast2->aval != wlenk_nLast2)
+	printf("\t cb_inst_%d.wlenk_nLast2 %d vs %d\n", Id, out_data->cb_inst[Id].wlenk_nLast2->aval, wlenk_nLast2);
+if (out_data->cb_inst[Id].totalBM->aval != totalBM)
+	printf("\t cb_inst_%d.totalBM %d vs %d\n", Id, out_data->cb_inst[Id].totalBM->aval, totalBM);
+if (out_data->cb_inst[Id].totalRes->aval != totalRes)
+	printf("\t cb_inst_%d.totalRes %d vs %d\n", Id, out_data->cb_inst[Id].totalRes->aval, totalRes);

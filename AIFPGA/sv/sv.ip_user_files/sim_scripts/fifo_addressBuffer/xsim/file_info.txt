@@ -1,0 +1,2 @@
+fifo_addressBuffer.v,verilog,xil_defaultlib,../../../../sv.srcs/sources_1/ip/fifo_addressBuffer/sim/fifo_addressBuffer.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,36 @@
+GCC=riscv64-unknown-elf-gcc
+OBJDUMP=riscv64-unknown-elf-objdump
+CFLAGS= -std=gnu99 -O2 -fno-common -fno-builtin-printf -Wall
+LDFLAGS= -g -DPREALLOCATE=1 -DMULTITHREAD=1 -mcmodel=medany -std=gnu99 -O2 -ffast-math -fno-common -fno-builtin-printf -march=rv64gc -Wa,-march=rv64gcxhwacha -lm -lgcc -I/home/lei/work//chipyard/generators/gemmini/software/gemmini-rocc-tests/build/../riscv-tests -I/home/lei/work//chipyard/generators/gemmini/software/gemmini-rocc-tests/build/../riscv-tests/env -I/home/lei/work//chipyard/generators/gemmini/software/gemmini-rocc-tests/build/.. -I/home/lei/work//chipyard/generators/gemmini/software/gemmini-rocc-tests/build/../riscv-tests/benchmarks/common -I/home/lei/work//chipyard/generators/deeprv/src/main/resources/csrc -DID_STRING=  -nostdlib -nostartfiles -static -T /home/lei/work//chipyard/generators/gemmini/software/gemmini-rocc-tests/build/../riscv-tests/benchmarks/common/test.ld -DBAREMETAL=1  /home/lei/work//chipyard/generators/deeprv/src/main/resources/csrc/syscalls.c /home/lei/work//chipyard/generators/gemmini/software/gemmini-rocc-tests/build/../riscv-tests/benchmarks/common/crt.S /home/lei/work//chipyard/generators/deeprv/src/main/resources/csrc/init.c
+//LDFLAGS= -g -DPREALLOCATE=1 -DMULTITHREAD=1 -mcmodel=medany -std=gnu99 -O2 -ffast-math -fno-common -fno-builtin-printf -march=rv64gc -Wa,-march=rv64gcxhwacha -lm -lgcc -I/home/lei/work/chipyard1.1/chipyard/generators/gemmini/software/gemmini-rocc-tests/build/../riscv-tests -I/home/lei/work/chipyard1.1/chipyard/generators/gemmini/software/gemmini-rocc-tests/build/../riscv-tests/env -I/home/lei/work/chipyard1.1/chipyard/generators/gemmini/software/gemmini-rocc-tests/build/.. -I/home/lei/work/chipyard1.1/chipyard/generators/gemmini/software/gemmini-rocc-tests/build/../riscv-tests/benchmarks/common -I/home/lei/work/chipyard1.1/chipyard/generators/deeprv/src/main/resources/csrc -DID_STRING=  -nostdlib -nostartfiles -static -T /home/lei/work/chipyard1.1/chipyard/generators/gemmini/software/gemmini-rocc-tests/build/../riscv-tests/benchmarks/common/test.ld -DBAREMETAL=1  /home/lei/work/chipyard1.1/chipyard/generators/deeprv/src/main/resources/csrc/syscalls.c /home/lei/work/chipyard1.1/chipyard/generators/gemmini/software/gemmini-rocc-tests/build/../riscv-tests/benchmarks/common/crt.S /home/lei/work/chipyard1.1/chipyard/generators/deeprv/src/main/resources/csrc/init.c
+
+#include libgloss.mk
+
+#PROGRAMS = pwm blkdev accum charcount nic-loopback big-blkdev pingd
+PROGRAMS = intrpt testot
+
+.DEFAULT_GOAL := default
+
+.PHONY: default
+default: $(addsuffix .riscv,$(PROGRAMS))
+
+.PHONY: dumps
+dumps: $(addsuffix .dump,$(PROGRAMS))
+
+%.o: %.S
+	$(GCC) $(CFLAGS) -D__ASSEMBLY__=1 -c $< -o $@
+
+%.o: %.c mmio.h
+	$(GCC) $(CFLAGS) -c $< -o $@
+
+%.riscv: %.c
+	$(GCC) $(LDFLAGS) $< -o $@
+
+%.dump: %.riscv
+	$(OBJDUMP) -D $< > $@
+
+
+.PHONY: clean
+clean:
+	rm -f *.riscv *.o *.dump
+	$(if $(libgloss),rm -rf $(libgloss_builddir)/)

@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Nov  7 09:14:38 2019
+# Process ID: 74304
+# Current directory: C:/AI/AIFPGA/sv
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent74060 C:\AI\AIFPGA\sv\sv.xpr
+# Log file: C:/AI/AIFPGA/sv/vivado.log
+# Journal file: C:/AI/AIFPGA/sv\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/AI/AIFPGA/sv/sv.xpr
+Scanning sources...
+Finished scanning sources
+ERROR: [Project 1-510] Parsing generated run data failed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  7 09:18:34 2019...

@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/Block_test/ip/Block_test_proc_sys_reset_0_0/sim/Block_test_proc_sys_reset_0_0.vhd" \
+"../../../bd/Block_test/ip/Block_test_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_8d04_psr_aclk_0.vhd" \
+
+nosort

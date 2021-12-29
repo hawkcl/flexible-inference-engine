@@ -1,0 +1,11 @@
+#--  Synopsys, Inc.
+#--  Version J-2015.03
+#--  Project file C:\AI\cloud\fpga\sv\sv.srcs\sources_1\new\SCG.prd
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

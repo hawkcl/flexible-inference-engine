@@ -1,0 +1,2 @@
+1. init_inputs() init all signals to 0
+2. #2 ports.resetN= 1'b1; //so we do not triger output first

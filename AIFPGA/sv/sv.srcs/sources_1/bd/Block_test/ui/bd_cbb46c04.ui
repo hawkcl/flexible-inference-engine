@@ -1,0 +1,46 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port ui_clk -pg 1 -y 620 -defaultsOSRD
+preplace port ACLK_PS -pg 1 -y 20 -defaultsOSRD
+preplace port PS_AXI -pg 1 -y 450 -defaultsOSRD
+preplace port S0_AXI -pg 1 -y 60 -defaultsOSRD
+preplace port DDR_PS -pg 1 -y 20 -defaultsOSRD
+preplace port ui_clk_sync_rst -pg 1 -y 580 -defaultsOSRD
+preplace port FCLK_CLK -pg 1 -y 40 -defaultsOSRD
+preplace port clock -pg 1 -y 600 -defaultsOSRD
+preplace port S1_AXI -pg 1 -y 240 -defaultsOSRD
+preplace port DDR3 -pg 1 -y 560 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 60 -defaultsOSRD
+preplace port init_calib_complete -pg 1 -y 660 -defaultsOSRD
+preplace port resetN -pg 1 -y 750 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 4 -y 460 -defaultsOSRD
+preplace inst axi_clock_converter_0 -pg 1 -lvl 3 -y 100 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 5 -y 610 -defaultsOSRD
+preplace inst axi_clock_converter_1 -pg 1 -lvl 3 -y 280 -defaultsOSRD
+preplace inst axi_clock_converter_2 -pg 1 -lvl 3 -y 460 -defaultsOSRD
+preplace inst axi_dwidth_converter_0 -pg 1 -lvl 2 -y 470 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 350 -defaultsOSRD
+preplace netloc S1_AXI_1 1 0 3 NJ 240 NJ 240 NJ
+preplace netloc mig_7series_0_mmcm_locked 1 0 6 -110 580 NJ 580 NJ 580 NJ 580 1340J 490 1650
+preplace netloc mig_7series_0_DDR3 1 5 1 NJ
+preplace netloc mig_7series_0_ui_addn_clk_0 1 0 6 -120 460 230 550 570 720 NJ 720 NJ 720 1660
+preplace netloc mig_7series_0_init_calib_complete 1 5 1 NJ
+preplace netloc resetn_0_1 1 0 5 NJ 750 NJ 750 590J 620 NJ 620 NJ
+preplace netloc smartconnect_0_M00_AXI 1 4 1 1350
+preplace netloc axi_clock_converter_1_M_AXI 1 3 1 960
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 3 240 370 590 570 970J
+preplace netloc mig_7series_0_ui_clk 1 2 4 600 560 960 560 1360J 500 1640
+preplace netloc S0_AXI_1 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc axi_clock_converter_2_M_AXI 1 3 1 N
+preplace netloc clock_1 1 0 5 NJ 600 NJ 600 NJ 600 NJ 600 NJ
+preplace netloc axi_clock_converter_0_M_AXI 1 3 1 970
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 4 NJ 390 560J 640 NJ 640 N
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 0 6 -130 760 NJ 760 NJ 760 NJ 760 NJ 760 1670
+preplace netloc axi_dwidth_converter_0_M_AXI 1 2 1 580
+preplace netloc PS_AXI_1 1 0 2 NJ 450 NJ
+levelinfo -pg 1 -150 60 400 800 1200 1500 1690 -top 0 -bot 2170
+"
+}
+0

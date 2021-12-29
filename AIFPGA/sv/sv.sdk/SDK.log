@@ -1,0 +1,2749 @@
+05:35:30 INFO  : Registering command handlers for SDK TCF services
+05:35:31 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+05:35:33 INFO  : XSCT server has started successfully.
+05:35:33 INFO  : Successfully done setting XSCT server connection channel  
+05:35:33 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+05:35:33 INFO  : Successfully done setting SDK workspace  
+05:36:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+05:36:42 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+05:36:42 INFO  : 'jtag frequency' command is executed.
+05:36:42 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+05:36:42 INFO  : Context for 'APU' is selected.
+05:36:43 INFO  : System reset is completed.
+05:36:46 INFO  : 'after 3000' command is executed.
+05:36:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+05:37:00 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+05:37:00 INFO  : Context for 'APU' is selected.
+05:37:00 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+05:37:00 INFO  : 'configparams force-mem-access 1' command is executed.
+05:37:00 INFO  : Context for 'APU' is selected.
+05:37:01 INFO  : 'ps7_init' command is executed.
+05:37:01 INFO  : 'ps7_post_config' command is executed.
+05:37:01 INFO  : 'configparams force-mem-access 0' command is executed.
+05:37:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+05:37:01 INFO  : Memory regions updated for context APU
+05:37:01 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+07:12:57 INFO  : Disconnected from the channel tcfchan#1.
+09:00:51 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+09:00:53 INFO  : XSCT server has started successfully.
+09:00:53 INFO  : Successfully done setting XSCT server connection channel  
+09:00:53 INFO  : Successfully done setting SDK workspace  
+09:00:58 INFO  : Registering command handlers for SDK TCF services
+09:00:58 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:00:59 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+09:00:59 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573520422363,  Project:1573506466263
+09:00:59 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:00:59 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+09:01:02 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:01:04 INFO  : 
+09:01:05 INFO  : Updating hardware inferred compiler options for start.
+09:01:05 INFO  : Clearing existing target manager status.
+09:01:05 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+09:01:06 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:01:07 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+09:03:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:03:01 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+09:03:01 INFO  : 'jtag frequency' command is executed.
+09:03:01 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+09:03:01 INFO  : Context for 'APU' is selected.
+09:03:02 INFO  : System reset is completed.
+09:03:05 INFO  : 'after 3000' command is executed.
+09:03:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+09:03:19 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+09:03:19 INFO  : Context for 'APU' is selected.
+09:03:20 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+09:03:20 INFO  : 'configparams force-mem-access 1' command is executed.
+09:03:20 INFO  : Context for 'APU' is selected.
+09:03:20 INFO  : 'ps7_init' command is executed.
+09:03:20 INFO  : 'ps7_post_config' command is executed.
+09:03:20 INFO  : 'configparams force-mem-access 0' command is executed.
+09:03:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:03:20 INFO  : Memory regions updated for context APU
+09:03:20 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+10:56:16 INFO  : Disconnected from the channel tcfchan#1.
+13:12:22 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+13:12:24 INFO  : XSCT server has started successfully.
+13:12:24 INFO  : Successfully done setting XSCT server connection channel  
+13:12:25 INFO  : Successfully done setting SDK workspace  
+13:12:29 INFO  : Registering command handlers for SDK TCF services
+13:12:29 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+13:12:29 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+13:12:29 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573535498584,  Project:1573520422363
+13:12:29 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+13:12:29 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+13:12:33 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:12:34 INFO  : 
+13:12:35 INFO  : Updating hardware inferred compiler options for start.
+13:12:35 INFO  : Clearing existing target manager status.
+13:12:35 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+13:12:36 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:12:37 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:13:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:13:18 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:13:18 INFO  : 'jtag frequency' command is executed.
+13:13:18 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+13:13:18 INFO  : Context for 'APU' is selected.
+13:13:18 INFO  : System reset is completed.
+13:13:21 INFO  : 'after 3000' command is executed.
+13:13:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+13:13:36 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+13:13:36 INFO  : Context for 'APU' is selected.
+13:13:36 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+13:13:36 INFO  : 'configparams force-mem-access 1' command is executed.
+13:13:36 INFO  : Context for 'APU' is selected.
+13:13:37 INFO  : 'ps7_init' command is executed.
+13:13:37 INFO  : 'ps7_post_config' command is executed.
+13:13:37 INFO  : 'configparams force-mem-access 0' command is executed.
+13:13:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:13:37 INFO  : Memory regions updated for context APU
+13:13:37 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:35:31 INFO  : Disconnected from the channel tcfchan#1.
+16:28:58 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+16:29:00 INFO  : XSCT server has started successfully.
+16:29:00 INFO  : Successfully done setting XSCT server connection channel  
+16:29:00 INFO  : Successfully done setting SDK workspace  
+16:29:05 INFO  : Registering command handlers for SDK TCF services
+16:29:05 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+16:29:05 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+16:29:05 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573547315423,  Project:1573535498584
+16:29:05 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+16:29:05 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+16:29:09 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:29:10 INFO  : 
+16:29:11 INFO  : Updating hardware inferred compiler options for start.
+16:29:11 INFO  : Clearing existing target manager status.
+16:29:11 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+16:29:12 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:29:13 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+16:29:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:29:48 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+16:29:48 INFO  : 'jtag frequency' command is executed.
+16:29:48 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+16:29:48 INFO  : Context for 'APU' is selected.
+16:29:48 INFO  : System reset is completed.
+16:29:51 INFO  : 'after 3000' command is executed.
+16:29:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+16:30:06 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+16:30:06 INFO  : Context for 'APU' is selected.
+16:30:06 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+16:30:06 INFO  : 'configparams force-mem-access 1' command is executed.
+16:30:06 INFO  : Context for 'APU' is selected.
+16:30:06 INFO  : 'ps7_init' command is executed.
+16:30:06 INFO  : 'ps7_post_config' command is executed.
+16:30:07 INFO  : 'configparams force-mem-access 0' command is executed.
+16:30:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:30:07 INFO  : Memory regions updated for context APU
+16:30:07 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+17:04:27 INFO  : Disconnected from the channel tcfchan#1.
+01:33:21 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+01:33:23 INFO  : XSCT server has started successfully.
+01:33:23 INFO  : Successfully done setting XSCT server connection channel  
+01:33:23 INFO  : Successfully done setting SDK workspace  
+01:33:29 INFO  : Registering command handlers for SDK TCF services
+01:33:29 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+01:33:29 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+01:33:29 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573579869772,  Project:1573547315423
+01:33:29 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+01:33:29 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+01:33:33 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:33:35 INFO  : 
+01:33:36 INFO  : Updating hardware inferred compiler options for start.
+01:33:36 INFO  : Clearing existing target manager status.
+01:33:36 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+01:33:36 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+01:33:38 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:39:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:39:19 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+01:39:19 INFO  : 'jtag frequency' command is executed.
+01:39:19 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+01:39:19 INFO  : Context for 'APU' is selected.
+01:39:20 INFO  : System reset is completed.
+01:39:23 INFO  : 'after 3000' command is executed.
+01:39:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+01:39:38 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+01:39:38 INFO  : Context for 'APU' is selected.
+01:39:38 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+01:39:38 INFO  : 'configparams force-mem-access 1' command is executed.
+01:39:38 INFO  : Context for 'APU' is selected.
+01:39:38 INFO  : 'ps7_init' command is executed.
+01:39:38 INFO  : 'ps7_post_config' command is executed.
+01:39:38 INFO  : 'configparams force-mem-access 0' command is executed.
+01:39:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:39:38 INFO  : Memory regions updated for context APU
+01:39:38 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+02:11:42 INFO  : Disconnected from the channel tcfchan#1.
+05:33:19 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+05:33:21 INFO  : XSCT server has started successfully.
+05:33:21 INFO  : Successfully done setting XSCT server connection channel  
+05:33:21 INFO  : Successfully done setting SDK workspace  
+05:33:27 INFO  : Registering command handlers for SDK TCF services
+05:33:27 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+05:33:27 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+05:34:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+05:34:59 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+05:35:00 INFO  : 'jtag frequency' command is executed.
+05:35:00 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+05:35:00 INFO  : Context for 'APU' is selected.
+05:35:00 INFO  : System reset is completed.
+05:35:03 INFO  : 'after 3000' command is executed.
+05:35:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+05:35:18 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+05:35:18 INFO  : Context for 'APU' is selected.
+05:35:18 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+05:35:18 INFO  : 'configparams force-mem-access 1' command is executed.
+05:35:18 INFO  : Context for 'APU' is selected.
+05:35:18 INFO  : 'ps7_init' command is executed.
+05:35:18 INFO  : 'ps7_post_config' command is executed.
+05:35:18 INFO  : 'configparams force-mem-access 0' command is executed.
+05:35:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+05:35:18 INFO  : Memory regions updated for context APU
+05:35:18 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+06:13:05 INFO  : Disconnected from the channel tcfchan#1.
+09:14:21 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+09:14:24 INFO  : XSCT server has started successfully.
+09:14:24 INFO  : Successfully done setting XSCT server connection channel  
+09:14:26 INFO  : Successfully done setting SDK workspace  
+09:14:34 INFO  : Registering command handlers for SDK TCF services
+09:14:34 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:14:35 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+09:14:35 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573607549562,  Project:1573579869772
+09:14:35 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:14:35 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+09:15:08 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:15:14 INFO  : 
+09:15:14 INFO  : Updating hardware inferred compiler options for start.
+09:15:14 INFO  : Clearing existing target manager status.
+09:15:14 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+09:15:15 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:15:17 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+09:16:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:16:11 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+09:16:11 INFO  : 'jtag frequency' command is executed.
+09:16:11 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+09:16:11 INFO  : Context for 'APU' is selected.
+09:16:11 INFO  : System reset is completed.
+09:16:14 INFO  : 'after 3000' command is executed.
+09:16:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+09:16:29 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+09:16:29 INFO  : Context for 'APU' is selected.
+09:16:29 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+09:16:29 INFO  : 'configparams force-mem-access 1' command is executed.
+09:16:29 INFO  : Context for 'APU' is selected.
+09:16:29 INFO  : 'ps7_init' command is executed.
+09:16:29 INFO  : 'ps7_post_config' command is executed.
+09:16:29 INFO  : 'configparams force-mem-access 0' command is executed.
+09:16:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:16:29 INFO  : Memory regions updated for context APU
+09:16:29 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+11:34:37 INFO  : Disconnected from the channel tcfchan#1.
+12:54:52 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+12:54:55 INFO  : XSCT server has started successfully.
+12:54:55 INFO  : Successfully done setting XSCT server connection channel  
+12:54:56 INFO  : Successfully done setting SDK workspace  
+12:55:06 INFO  : Registering command handlers for SDK TCF services
+12:55:06 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+12:55:06 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+12:55:06 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573620721151,  Project:1573607549562
+12:55:06 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+12:55:06 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+12:55:11 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:55:15 INFO  : 
+12:55:16 INFO  : Updating hardware inferred compiler options for start.
+12:55:16 INFO  : Clearing existing target manager status.
+12:55:16 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+12:55:17 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+12:55:19 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+12:57:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:57:22 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:57:22 INFO  : 'jtag frequency' command is executed.
+12:57:22 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+12:57:22 INFO  : Context for 'APU' is selected.
+12:57:22 INFO  : System reset is completed.
+12:57:25 INFO  : 'after 3000' command is executed.
+12:57:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+12:57:40 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+12:57:40 INFO  : Context for 'APU' is selected.
+12:57:40 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+12:57:40 INFO  : 'configparams force-mem-access 1' command is executed.
+12:57:40 INFO  : Context for 'APU' is selected.
+12:57:40 INFO  : 'ps7_init' command is executed.
+12:57:40 INFO  : 'ps7_post_config' command is executed.
+12:57:40 INFO  : 'configparams force-mem-access 0' command is executed.
+12:57:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:57:41 INFO  : Memory regions updated for context APU
+12:57:41 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:34:20 INFO  : Disconnected from the channel tcfchan#1.
+01:21:58 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+01:22:01 INFO  : XSCT server has started successfully.
+01:22:01 INFO  : Successfully done setting XSCT server connection channel  
+01:22:02 INFO  : Successfully done setting SDK workspace  
+01:22:08 INFO  : Registering command handlers for SDK TCF services
+01:22:08 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+01:22:08 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+01:22:08 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573643714624,  Project:1573620721151
+01:22:08 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+01:22:09 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+01:22:13 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:22:15 INFO  : 
+01:22:16 INFO  : Updating hardware inferred compiler options for start.
+01:22:16 INFO  : Clearing existing target manager status.
+01:22:16 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+01:22:17 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+01:22:19 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:23:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:23:11 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+01:23:11 INFO  : 'jtag frequency' command is executed.
+01:23:11 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+01:23:11 INFO  : Context for 'APU' is selected.
+01:23:11 INFO  : System reset is completed.
+01:23:14 INFO  : 'after 3000' command is executed.
+01:23:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+01:23:29 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+01:23:29 INFO  : Context for 'APU' is selected.
+01:23:29 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+01:23:29 INFO  : 'configparams force-mem-access 1' command is executed.
+01:23:29 INFO  : Context for 'APU' is selected.
+01:23:29 INFO  : 'ps7_init' command is executed.
+01:23:29 INFO  : 'ps7_post_config' command is executed.
+01:23:29 INFO  : 'configparams force-mem-access 0' command is executed.
+01:23:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:23:29 INFO  : Memory regions updated for context APU
+01:23:29 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+01:44:02 INFO  : Disconnected from the channel tcfchan#1.
+06:29:15 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+06:29:17 INFO  : XSCT server has started successfully.
+06:29:17 INFO  : Successfully done setting XSCT server connection channel  
+06:29:19 INFO  : Successfully done setting SDK workspace  
+06:29:28 INFO  : Registering command handlers for SDK TCF services
+06:29:28 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+06:29:28 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+06:29:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:29:42 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+06:29:42 INFO  : 'jtag frequency' command is executed.
+06:29:42 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+06:29:42 INFO  : Context for 'APU' is selected.
+06:29:42 INFO  : System reset is completed.
+06:29:45 INFO  : 'after 3000' command is executed.
+06:29:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+06:30:00 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+06:30:00 INFO  : Context for 'APU' is selected.
+06:30:00 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+06:30:00 INFO  : 'configparams force-mem-access 1' command is executed.
+06:30:00 INFO  : Context for 'APU' is selected.
+06:30:00 INFO  : 'ps7_init' command is executed.
+06:30:00 INFO  : 'ps7_post_config' command is executed.
+06:30:00 INFO  : 'configparams force-mem-access 0' command is executed.
+06:30:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+06:30:00 INFO  : Memory regions updated for context APU
+06:30:00 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+06:42:19 INFO  : Disconnected from the channel tcfchan#1.
+00:47:26 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+00:47:32 INFO  : XSCT server has started successfully.
+00:47:33 INFO  : Successfully done setting XSCT server connection channel  
+00:47:36 INFO  : Successfully done setting SDK workspace  
+00:47:53 INFO  : Registering command handlers for SDK TCF services
+00:47:53 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+00:47:53 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+00:47:53 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573720690989,  Project:1573643714624
+00:47:53 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+00:47:54 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+00:48:29 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+00:49:05 INFO  : 
+00:49:06 INFO  : Updating hardware inferred compiler options for start.
+00:49:06 INFO  : Clearing existing target manager status.
+00:49:06 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+00:49:08 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+00:49:09 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+00:54:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:54:46 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+00:54:46 INFO  : 'jtag frequency' command is executed.
+00:54:46 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+00:54:46 INFO  : Context for 'APU' is selected.
+00:54:47 INFO  : System reset is completed.
+00:54:50 INFO  : 'after 3000' command is executed.
+00:54:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+00:55:04 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+00:55:04 INFO  : Context for 'APU' is selected.
+00:55:05 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+00:55:05 INFO  : 'configparams force-mem-access 1' command is executed.
+00:55:05 INFO  : Context for 'APU' is selected.
+00:55:05 INFO  : 'ps7_init' command is executed.
+00:55:05 INFO  : 'ps7_post_config' command is executed.
+00:55:05 INFO  : 'configparams force-mem-access 0' command is executed.
+00:55:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:55:05 INFO  : Memory regions updated for context APU
+00:55:05 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+02:28:31 INFO  : Disconnected from the channel tcfchan#1.
+02:29:25 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+02:29:27 INFO  : XSCT server has started successfully.
+02:29:27 INFO  : Successfully done setting XSCT server connection channel  
+02:29:28 INFO  : Successfully done setting SDK workspace  
+02:29:33 INFO  : Registering command handlers for SDK TCF services
+02:29:33 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+02:29:33 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+02:30:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:30:04 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+02:30:04 INFO  : 'jtag frequency' command is executed.
+02:30:04 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+02:30:04 INFO  : Context for 'APU' is selected.
+02:30:04 INFO  : System reset is completed.
+02:30:07 INFO  : 'after 3000' command is executed.
+02:30:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+02:30:22 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+02:30:22 INFO  : Context for 'APU' is selected.
+02:30:22 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+02:30:22 INFO  : 'configparams force-mem-access 1' command is executed.
+02:30:22 INFO  : Context for 'APU' is selected.
+02:30:22 INFO  : 'ps7_init' command is executed.
+02:30:22 INFO  : 'ps7_post_config' command is executed.
+02:30:22 INFO  : 'configparams force-mem-access 0' command is executed.
+02:30:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:30:22 INFO  : Memory regions updated for context APU
+02:30:22 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+02:58:05 INFO  : Disconnected from the channel tcfchan#1.
+06:06:59 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+06:07:03 INFO  : XSCT server has started successfully.
+06:07:03 INFO  : Successfully done setting XSCT server connection channel  
+06:07:03 INFO  : Successfully done setting SDK workspace  
+06:07:10 INFO  : Registering command handlers for SDK TCF services
+06:07:10 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+06:07:11 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+06:07:11 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573768143003,  Project:1573720690989
+06:07:11 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+06:07:11 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+06:07:51 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+06:07:54 INFO  : 
+06:07:55 INFO  : Updating hardware inferred compiler options for start.
+06:07:55 INFO  : Clearing existing target manager status.
+06:07:55 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+06:07:55 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+06:07:58 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+06:12:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:12:38 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+06:12:38 INFO  : 'jtag frequency' command is executed.
+06:12:38 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+06:12:38 INFO  : Context for 'APU' is selected.
+06:12:38 INFO  : System reset is completed.
+06:12:41 INFO  : 'after 3000' command is executed.
+06:12:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+06:12:56 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+06:12:56 INFO  : Context for 'APU' is selected.
+06:12:56 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+06:12:56 INFO  : 'configparams force-mem-access 1' command is executed.
+06:12:56 INFO  : Context for 'APU' is selected.
+06:12:56 INFO  : 'ps7_init' command is executed.
+06:12:56 INFO  : 'ps7_post_config' command is executed.
+06:12:56 INFO  : 'configparams force-mem-access 0' command is executed.
+06:12:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+06:12:56 INFO  : Memory regions updated for context APU
+06:12:56 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+06:15:54 INFO  : Disconnected from the channel tcfchan#1.
+06:15:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+06:15:55 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+06:15:55 INFO  : 'jtag frequency' command is executed.
+06:15:55 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+06:15:55 INFO  : Context for 'APU' is selected.
+06:15:55 INFO  : System reset is completed.
+06:15:58 INFO  : 'after 3000' command is executed.
+06:15:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+06:16:13 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+06:16:13 INFO  : Context for 'APU' is selected.
+06:16:16 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+06:16:16 INFO  : 'configparams force-mem-access 1' command is executed.
+06:16:16 INFO  : Context for 'APU' is selected.
+06:16:16 INFO  : 'ps7_init' command is executed.
+06:16:16 INFO  : 'ps7_post_config' command is executed.
+06:16:16 INFO  : 'configparams force-mem-access 0' command is executed.
+06:16:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+06:16:16 INFO  : Memory regions updated for context APU
+06:16:16 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+06:34:57 INFO  : Disconnected from the channel tcfchan#2.
+09:49:10 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+09:49:12 INFO  : XSCT server has started successfully.
+09:49:12 INFO  : Successfully done setting XSCT server connection channel  
+09:49:13 INFO  : Successfully done setting SDK workspace  
+09:49:19 INFO  : Registering command handlers for SDK TCF services
+09:49:19 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:49:20 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+09:49:20 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1573780421008,  Project:1573768143003
+09:49:20 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:49:20 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+09:49:24 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:49:27 INFO  : 
+09:49:28 INFO  : Updating hardware inferred compiler options for start.
+09:49:28 INFO  : Clearing existing target manager status.
+09:49:28 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+09:49:29 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:49:31 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+09:50:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:50:50 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+09:50:50 INFO  : 'jtag frequency' command is executed.
+09:50:50 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+09:50:50 INFO  : Context for 'APU' is selected.
+09:50:50 INFO  : System reset is completed.
+09:50:53 INFO  : 'after 3000' command is executed.
+09:50:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+09:51:08 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+09:51:08 INFO  : Context for 'APU' is selected.
+09:51:08 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+09:51:08 INFO  : 'configparams force-mem-access 1' command is executed.
+09:51:08 INFO  : Context for 'APU' is selected.
+09:51:08 INFO  : 'ps7_init' command is executed.
+09:51:08 INFO  : 'ps7_post_config' command is executed.
+09:51:08 INFO  : 'configparams force-mem-access 0' command is executed.
+09:51:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:51:08 INFO  : Memory regions updated for context APU
+09:51:08 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+10:27:17 INFO  : Disconnected from the channel tcfchan#1.
+15:29:44 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+15:29:47 INFO  : XSCT server has started successfully.
+15:29:48 INFO  : Successfully done setting XSCT server connection channel  
+15:29:48 INFO  : Successfully done setting SDK workspace  
+15:29:55 INFO  : Registering command handlers for SDK TCF services
+15:29:55 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+15:29:55 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+15:30:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:30:41 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:30:41 INFO  : 'jtag frequency' command is executed.
+15:30:41 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+15:30:41 INFO  : Context for 'APU' is selected.
+15:30:41 INFO  : System reset is completed.
+15:30:44 INFO  : 'after 3000' command is executed.
+15:30:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+15:30:59 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+15:30:59 INFO  : Context for 'APU' is selected.
+15:30:59 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+15:30:59 INFO  : 'configparams force-mem-access 1' command is executed.
+15:30:59 INFO  : Context for 'APU' is selected.
+15:30:59 INFO  : 'ps7_init' command is executed.
+15:30:59 INFO  : 'ps7_post_config' command is executed.
+15:30:59 INFO  : 'configparams force-mem-access 0' command is executed.
+15:30:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:30:59 INFO  : Memory regions updated for context APU
+15:30:59 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+16:29:53 INFO  : Disconnected from the channel tcfchan#1.
+02:03:25 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+02:03:28 INFO  : XSCT server has started successfully.
+02:03:29 INFO  : Successfully done setting XSCT server connection channel  
+02:03:29 INFO  : Successfully done setting SDK workspace  
+02:03:37 INFO  : Registering command handlers for SDK TCF services
+02:03:37 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+02:03:37 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+02:08:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:08:28 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+02:08:28 INFO  : 'jtag frequency' command is executed.
+02:08:29 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+02:08:29 INFO  : Context for 'APU' is selected.
+02:08:29 INFO  : System reset is completed.
+02:08:32 INFO  : 'after 3000' command is executed.
+02:08:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+02:08:46 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+02:08:47 INFO  : Context for 'APU' is selected.
+02:08:47 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+02:08:47 INFO  : 'configparams force-mem-access 1' command is executed.
+02:08:47 INFO  : Context for 'APU' is selected.
+02:08:47 INFO  : 'ps7_init' command is executed.
+02:08:47 INFO  : 'ps7_post_config' command is executed.
+02:08:47 INFO  : 'configparams force-mem-access 0' command is executed.
+02:08:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:08:47 INFO  : Memory regions updated for context APU
+02:08:47 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+12:11:08 INFO  : Disconnected from the channel tcfchan#1.
+12:11:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:11:09 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:11:09 INFO  : 'jtag frequency' command is executed.
+12:11:09 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+12:11:09 INFO  : Context for 'APU' is selected.
+12:11:10 INFO  : System reset is completed.
+12:11:13 INFO  : 'after 3000' command is executed.
+12:11:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+12:11:27 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+12:11:27 INFO  : Context for 'APU' is selected.
+12:11:30 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+12:11:30 INFO  : 'configparams force-mem-access 1' command is executed.
+12:11:30 INFO  : Context for 'APU' is selected.
+12:11:30 INFO  : 'ps7_init' command is executed.
+12:11:30 INFO  : 'ps7_post_config' command is executed.
+12:11:30 INFO  : 'configparams force-mem-access 0' command is executed.
+12:11:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:11:30 INFO  : Memory regions updated for context APU
+12:11:30 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:35:31 INFO  : Disconnected from the channel tcfchan#2.
+14:35:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:35:32 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:35:32 INFO  : 'jtag frequency' command is executed.
+14:35:32 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+14:35:32 INFO  : Context for 'APU' is selected.
+14:35:32 INFO  : System reset is completed.
+14:35:35 INFO  : 'after 3000' command is executed.
+14:35:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:35:50 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+14:35:50 INFO  : Context for 'APU' is selected.
+14:35:52 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+14:35:52 INFO  : 'configparams force-mem-access 1' command is executed.
+14:35:52 INFO  : Context for 'APU' is selected.
+14:35:52 INFO  : 'ps7_init' command is executed.
+14:35:52 INFO  : 'ps7_post_config' command is executed.
+14:35:52 INFO  : 'configparams force-mem-access 0' command is executed.
+14:35:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:35:53 INFO  : Memory regions updated for context APU
+14:35:53 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:43:16 INFO  : Disconnected from the channel tcfchan#3.
+03:04:26 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+03:04:29 INFO  : XSCT server has started successfully.
+03:04:29 INFO  : Successfully done setting XSCT server connection channel  
+03:04:30 INFO  : Successfully done setting SDK workspace  
+03:04:37 INFO  : Registering command handlers for SDK TCF services
+03:04:37 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+03:04:38 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+03:06:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:06:53 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+03:06:53 INFO  : 'jtag frequency' command is executed.
+03:06:53 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+03:06:53 INFO  : Context for 'APU' is selected.
+03:06:53 INFO  : System reset is completed.
+03:06:56 INFO  : 'after 3000' command is executed.
+03:06:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+03:07:11 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+03:07:11 INFO  : Context for 'APU' is selected.
+03:07:11 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+03:07:11 INFO  : 'configparams force-mem-access 1' command is executed.
+03:07:11 INFO  : Context for 'APU' is selected.
+03:07:11 INFO  : 'ps7_init' command is executed.
+03:07:11 INFO  : 'ps7_post_config' command is executed.
+03:07:11 INFO  : 'configparams force-mem-access 0' command is executed.
+03:07:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:07:11 INFO  : Memory regions updated for context APU
+03:07:11 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+07:40:23 INFO  : Disconnected from the channel tcfchan#1.
+07:40:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+07:40:24 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+07:40:24 INFO  : 'jtag frequency' command is executed.
+07:40:24 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+07:40:24 INFO  : Context for 'APU' is selected.
+07:40:25 INFO  : System reset is completed.
+07:40:28 INFO  : 'after 3000' command is executed.
+07:40:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+07:40:42 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+07:40:42 INFO  : Context for 'APU' is selected.
+07:40:45 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+07:40:45 INFO  : 'configparams force-mem-access 1' command is executed.
+07:40:45 INFO  : Context for 'APU' is selected.
+07:40:45 INFO  : 'ps7_init' command is executed.
+07:40:45 INFO  : 'ps7_post_config' command is executed.
+07:40:45 INFO  : 'configparams force-mem-access 0' command is executed.
+07:40:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+07:40:45 INFO  : Memory regions updated for context APU
+07:40:45 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+10:39:56 INFO  : Disconnected from the channel tcfchan#2.
+10:39:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:39:58 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+10:39:58 INFO  : 'jtag frequency' command is executed.
+10:39:58 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+10:39:58 INFO  : Context for 'APU' is selected.
+10:39:58 INFO  : System reset is completed.
+10:40:01 INFO  : 'after 3000' command is executed.
+10:40:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+10:40:16 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+10:40:16 INFO  : Context for 'APU' is selected.
+10:40:18 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+10:40:18 INFO  : 'configparams force-mem-access 1' command is executed.
+10:40:18 INFO  : Context for 'APU' is selected.
+10:40:18 INFO  : 'ps7_init' command is executed.
+10:40:18 INFO  : 'ps7_post_config' command is executed.
+10:40:18 INFO  : 'configparams force-mem-access 0' command is executed.
+10:40:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:40:18 INFO  : Memory regions updated for context APU
+10:40:18 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:27:55 INFO  : Disconnected from the channel tcfchan#3.
+14:27:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:27:56 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:27:56 INFO  : 'jtag frequency' command is executed.
+14:27:56 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+14:27:56 INFO  : Context for 'APU' is selected.
+14:27:56 INFO  : System reset is completed.
+14:27:59 INFO  : 'after 3000' command is executed.
+14:27:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:28:14 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+14:28:14 INFO  : Context for 'APU' is selected.
+14:28:17 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+14:28:17 INFO  : 'configparams force-mem-access 1' command is executed.
+14:28:17 INFO  : Context for 'APU' is selected.
+14:28:17 INFO  : 'ps7_init' command is executed.
+14:28:17 INFO  : 'ps7_post_config' command is executed.
+14:28:17 INFO  : 'configparams force-mem-access 0' command is executed.
+14:28:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:28:17 INFO  : Memory regions updated for context APU
+14:28:17 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:59:43 INFO  : Disconnected from the channel tcfchan#4.
+14:59:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:59:44 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:59:44 INFO  : 'jtag frequency' command is executed.
+14:59:44 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+14:59:44 INFO  : Context for 'APU' is selected.
+14:59:45 INFO  : System reset is completed.
+14:59:48 INFO  : 'after 3000' command is executed.
+14:59:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+15:00:02 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+15:00:02 INFO  : Context for 'APU' is selected.
+15:00:04 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+15:00:04 INFO  : 'configparams force-mem-access 1' command is executed.
+15:00:04 INFO  : Context for 'APU' is selected.
+15:00:05 INFO  : 'ps7_init' command is executed.
+15:00:05 INFO  : 'ps7_post_config' command is executed.
+15:00:05 INFO  : 'configparams force-mem-access 0' command is executed.
+15:00:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:00:05 INFO  : Memory regions updated for context APU
+15:00:05 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+15:39:01 INFO  : Disconnected from the channel tcfchan#5.
+08:48:08 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+08:48:10 INFO  : XSCT server has started successfully.
+08:48:10 INFO  : Successfully done setting XSCT server connection channel  
+08:48:11 INFO  : Successfully done setting SDK workspace  
+08:48:15 INFO  : Registering command handlers for SDK TCF services
+08:48:15 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+08:48:15 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+08:48:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+08:48:24 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+08:48:24 INFO  : 'jtag frequency' command is executed.
+08:48:24 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+08:48:24 INFO  : Context for 'APU' is selected.
+08:48:25 INFO  : System reset is completed.
+08:48:28 INFO  : 'after 3000' command is executed.
+08:48:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+08:48:42 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+08:48:43 INFO  : Context for 'APU' is selected.
+08:48:43 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+08:48:43 INFO  : 'configparams force-mem-access 1' command is executed.
+08:48:43 INFO  : Context for 'APU' is selected.
+08:48:43 INFO  : 'ps7_init' command is executed.
+08:48:43 INFO  : 'ps7_post_config' command is executed.
+08:48:43 INFO  : 'configparams force-mem-access 0' command is executed.
+08:48:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+08:48:43 INFO  : Memory regions updated for context APU
+08:48:43 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:50:47 INFO  : Disconnected from the channel tcfchan#1.
+12:35:34 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+12:35:39 INFO  : XSCT server has started successfully.
+12:35:42 INFO  : Successfully done setting XSCT server connection channel  
+12:35:42 INFO  : Successfully done setting SDK workspace  
+12:35:54 INFO  : Registering command handlers for SDK TCF services
+12:35:54 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+12:35:55 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+12:35:55 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574396796736,  Project:1573780421008
+12:35:55 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+12:35:55 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+12:36:33 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:36:41 INFO  : 
+12:36:42 INFO  : Updating hardware inferred compiler options for start.
+12:36:42 INFO  : Clearing existing target manager status.
+12:36:42 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+12:36:43 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+12:36:45 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+12:39:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:39:48 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:39:48 INFO  : 'jtag frequency' command is executed.
+12:39:48 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+12:39:48 INFO  : Context for 'APU' is selected.
+12:39:49 INFO  : System reset is completed.
+12:39:52 INFO  : 'after 3000' command is executed.
+12:39:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+12:40:06 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+12:40:06 INFO  : Context for 'APU' is selected.
+12:40:06 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+12:40:06 INFO  : 'configparams force-mem-access 1' command is executed.
+12:40:06 INFO  : Context for 'APU' is selected.
+12:40:07 INFO  : 'ps7_init' command is executed.
+12:40:07 INFO  : 'ps7_post_config' command is executed.
+12:40:07 INFO  : 'configparams force-mem-access 0' command is executed.
+12:40:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:40:07 INFO  : Memory regions updated for context APU
+12:40:07 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+12:59:54 INFO  : Disconnected from the channel tcfchan#1.
+12:59:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:59:55 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:59:55 INFO  : 'jtag frequency' command is executed.
+12:59:55 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+12:59:55 INFO  : Context for 'APU' is selected.
+12:59:55 INFO  : System reset is completed.
+12:59:58 INFO  : 'after 3000' command is executed.
+12:59:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+13:00:13 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+13:00:13 INFO  : Context for 'APU' is selected.
+13:00:15 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+13:00:15 INFO  : 'configparams force-mem-access 1' command is executed.
+13:00:15 INFO  : Context for 'APU' is selected.
+13:00:15 INFO  : 'ps7_init' command is executed.
+13:00:15 INFO  : 'ps7_post_config' command is executed.
+13:00:15 INFO  : 'configparams force-mem-access 0' command is executed.
+13:00:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:00:15 INFO  : Memory regions updated for context APU
+13:00:15 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:22:29 INFO  : Disconnected from the channel tcfchan#2.
+13:22:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:22:31 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:22:31 INFO  : 'jtag frequency' command is executed.
+13:22:31 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+13:22:31 INFO  : Context for 'APU' is selected.
+13:22:31 INFO  : System reset is completed.
+13:22:34 INFO  : 'after 3000' command is executed.
+13:22:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+13:22:49 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+13:22:49 INFO  : Context for 'APU' is selected.
+13:22:49 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+13:22:49 INFO  : 'configparams force-mem-access 1' command is executed.
+13:22:49 INFO  : Context for 'APU' is selected.
+13:22:49 INFO  : 'ps7_init' command is executed.
+13:22:49 INFO  : 'ps7_post_config' command is executed.
+13:22:49 INFO  : 'configparams force-mem-access 0' command is executed.
+13:22:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:22:49 INFO  : Memory regions updated for context APU
+13:22:49 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:25:58 INFO  : Disconnected from the channel tcfchan#3.
+13:25:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:25:59 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:25:59 INFO  : 'jtag frequency' command is executed.
+13:25:59 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+13:25:59 INFO  : Context for 'APU' is selected.
+13:25:59 INFO  : System reset is completed.
+13:26:02 INFO  : 'after 3000' command is executed.
+13:26:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+13:26:17 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+13:26:17 INFO  : Context for 'APU' is selected.
+13:26:17 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+13:26:17 INFO  : 'configparams force-mem-access 1' command is executed.
+13:26:17 INFO  : Context for 'APU' is selected.
+13:26:17 INFO  : 'ps7_init' command is executed.
+13:26:17 INFO  : 'ps7_post_config' command is executed.
+13:26:17 INFO  : 'configparams force-mem-access 0' command is executed.
+13:26:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:26:17 INFO  : Memory regions updated for context APU
+13:26:17 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:29:58 INFO  : Disconnected from the channel tcfchan#4.
+13:29:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:29:59 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:29:59 INFO  : 'jtag frequency' command is executed.
+13:29:59 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+13:29:59 INFO  : Context for 'APU' is selected.
+13:29:59 INFO  : System reset is completed.
+13:30:02 INFO  : 'after 3000' command is executed.
+13:30:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+13:30:17 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+13:30:18 INFO  : Context for 'APU' is selected.
+13:30:18 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+13:30:18 INFO  : 'configparams force-mem-access 1' command is executed.
+13:30:18 INFO  : Context for 'APU' is selected.
+13:30:18 INFO  : 'ps7_init' command is executed.
+13:30:18 INFO  : 'ps7_post_config' command is executed.
+13:30:18 INFO  : 'configparams force-mem-access 0' command is executed.
+13:30:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:30:18 INFO  : Memory regions updated for context APU
+13:30:18 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+16:00:26 INFO  : Disconnected from the channel tcfchan#5.
+00:45:01 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+00:45:03 INFO  : XSCT server has started successfully.
+00:45:04 INFO  : Successfully done setting XSCT server connection channel  
+00:45:04 INFO  : Successfully done setting SDK workspace  
+00:45:12 INFO  : Registering command handlers for SDK TCF services
+00:45:13 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+00:45:13 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+00:45:13 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574419384140,  Project:1574396796736
+00:45:13 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+00:45:14 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+00:45:17 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+00:45:21 INFO  : 
+00:45:23 INFO  : Updating hardware inferred compiler options for start.
+00:45:23 INFO  : Clearing existing target manager status.
+00:45:23 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+00:45:23 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+00:45:25 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+00:56:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:56:29 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+00:56:29 INFO  : 'jtag frequency' command is executed.
+00:56:29 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+00:56:29 INFO  : Context for 'APU' is selected.
+00:56:30 INFO  : System reset is completed.
+00:56:33 INFO  : 'after 3000' command is executed.
+00:56:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+00:56:47 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+00:56:47 INFO  : Context for 'APU' is selected.
+00:56:47 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+00:56:47 INFO  : 'configparams force-mem-access 1' command is executed.
+00:56:48 INFO  : Context for 'APU' is selected.
+00:56:48 INFO  : 'ps7_init' command is executed.
+00:56:48 INFO  : 'ps7_post_config' command is executed.
+00:56:48 INFO  : 'configparams force-mem-access 0' command is executed.
+00:56:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:56:48 INFO  : Memory regions updated for context APU
+00:56:48 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+03:35:50 INFO  : Disconnected from the channel tcfchan#1.
+05:15:57 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+05:16:01 INFO  : XSCT server has started successfully.
+05:16:01 INFO  : Successfully done setting XSCT server connection channel  
+05:16:01 INFO  : Successfully done setting SDK workspace  
+05:16:06 INFO  : Registering command handlers for SDK TCF services
+05:16:06 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+05:16:07 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+05:16:07 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574716238561,  Project:1574419384140
+05:16:07 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+05:16:07 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+05:16:09 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+05:16:13 INFO  : 
+05:16:14 INFO  : Updating hardware inferred compiler options for start.
+05:16:14 INFO  : Clearing existing target manager status.
+05:16:14 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+05:16:14 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+05:16:26 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+05:22:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+05:22:45 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+05:22:45 INFO  : 'jtag frequency' command is executed.
+05:22:45 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+05:22:45 INFO  : Context for 'APU' is selected.
+05:22:46 INFO  : System reset is completed.
+05:22:49 INFO  : 'after 3000' command is executed.
+05:22:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+05:23:03 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+05:23:03 INFO  : Context for 'APU' is selected.
+05:23:03 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+05:23:03 INFO  : 'configparams force-mem-access 1' command is executed.
+05:23:03 INFO  : Context for 'APU' is selected.
+05:23:04 INFO  : 'ps7_init' command is executed.
+05:23:04 INFO  : 'ps7_post_config' command is executed.
+05:23:04 INFO  : 'configparams force-mem-access 0' command is executed.
+05:23:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+05:23:04 INFO  : Memory regions updated for context APU
+05:23:04 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+05:27:39 INFO  : Disconnected from the channel tcfchan#1.
+05:28:02 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+05:28:04 INFO  : XSCT server has started successfully.
+05:28:04 INFO  : Successfully done setting XSCT server connection channel  
+05:28:04 INFO  : Successfully done setting SDK workspace  
+05:28:09 INFO  : Registering command handlers for SDK TCF services
+05:28:09 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+05:28:09 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+05:30:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+05:30:05 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+05:30:05 INFO  : 'jtag frequency' command is executed.
+05:30:05 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+05:30:05 INFO  : Context for 'APU' is selected.
+05:30:05 INFO  : System reset is completed.
+05:30:08 INFO  : 'after 3000' command is executed.
+05:30:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+05:30:23 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+05:30:23 INFO  : Context for 'APU' is selected.
+05:30:23 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+05:30:23 INFO  : 'configparams force-mem-access 1' command is executed.
+05:30:23 INFO  : Context for 'APU' is selected.
+05:30:23 INFO  : 'ps7_init' command is executed.
+05:30:23 INFO  : 'ps7_post_config' command is executed.
+05:30:23 INFO  : 'configparams force-mem-access 0' command is executed.
+05:30:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+05:30:23 INFO  : Memory regions updated for context APU
+05:30:23 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+08:51:05 INFO  : Disconnected from the channel tcfchan#1.
+02:17:04 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+02:17:07 INFO  : XSCT server has started successfully.
+02:17:09 INFO  : Successfully done setting XSCT server connection channel  
+02:17:09 INFO  : Successfully done setting SDK workspace  
+02:17:17 INFO  : Registering command handlers for SDK TCF services
+02:17:17 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+02:17:17 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+02:17:17 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574760087435,  Project:1574716238561
+02:17:17 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+02:17:17 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+02:17:45 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+02:17:49 INFO  : 
+02:17:49 INFO  : Updating hardware inferred compiler options for start.
+02:17:49 INFO  : Clearing existing target manager status.
+02:17:49 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+02:17:50 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+02:17:51 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+02:24:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:24:49 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+02:24:49 INFO  : 'jtag frequency' command is executed.
+02:24:49 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+02:24:49 INFO  : Context for 'APU' is selected.
+02:24:49 INFO  : System reset is completed.
+02:24:52 INFO  : 'after 3000' command is executed.
+02:24:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+02:25:07 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+02:25:07 INFO  : Context for 'APU' is selected.
+02:25:07 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+02:25:07 INFO  : 'configparams force-mem-access 1' command is executed.
+02:25:07 INFO  : Context for 'APU' is selected.
+02:25:07 INFO  : 'ps7_init' command is executed.
+02:25:07 INFO  : 'ps7_post_config' command is executed.
+02:25:07 INFO  : 'configparams force-mem-access 0' command is executed.
+02:25:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:25:07 INFO  : Memory regions updated for context APU
+02:25:07 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+04:20:42 INFO  : Disconnected from the channel tcfchan#1.
+04:48:05 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+04:48:07 INFO  : XSCT server has started successfully.
+04:48:07 INFO  : Successfully done setting XSCT server connection channel  
+04:48:07 INFO  : Successfully done setting SDK workspace  
+04:48:13 INFO  : Registering command handlers for SDK TCF services
+04:48:13 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+04:48:13 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+04:48:13 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574801246684,  Project:1574760087435
+04:48:13 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+04:48:13 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+04:48:17 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+04:48:20 INFO  : 
+04:48:21 INFO  : Updating hardware inferred compiler options for start.
+04:48:21 INFO  : Clearing existing target manager status.
+04:48:21 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+04:48:22 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+04:48:23 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+05:05:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+05:05:20 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+05:05:20 INFO  : 'jtag frequency' command is executed.
+05:05:20 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+05:05:20 INFO  : Context for 'APU' is selected.
+05:05:21 INFO  : System reset is completed.
+05:05:24 INFO  : 'after 3000' command is executed.
+05:05:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+05:05:38 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+05:05:38 INFO  : Context for 'APU' is selected.
+05:05:38 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+05:05:38 INFO  : 'configparams force-mem-access 1' command is executed.
+05:05:38 INFO  : Context for 'APU' is selected.
+05:05:39 INFO  : 'ps7_init' command is executed.
+05:05:39 INFO  : 'ps7_post_config' command is executed.
+05:05:39 INFO  : 'configparams force-mem-access 0' command is executed.
+05:05:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+05:05:39 INFO  : Memory regions updated for context APU
+05:05:39 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+08:39:57 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574815178057,  Project:1574801246684
+08:39:57 INFO  : Project top_hw_platform_0's source hardware specification located at C:/AI/AIFPGA/sv/sv.sdk/top.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+08:41:05 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+08:41:09 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+08:41:12 INFO  : 
+08:41:13 INFO  : Updating hardware inferred compiler options for start.
+08:41:13 INFO  : Clearing existing target manager status.
+08:41:13 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+08:41:14 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+08:41:15 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+08:41:57 INFO  : Disconnected from the channel tcfchan#1.
+08:41:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+08:41:58 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+08:41:58 INFO  : 'jtag frequency' command is executed.
+08:41:58 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+08:41:58 INFO  : Context for 'APU' is selected.
+08:41:58 INFO  : System reset is completed.
+08:42:01 INFO  : 'after 3000' command is executed.
+08:42:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+08:42:16 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+08:42:16 INFO  : Context for 'APU' is selected.
+08:42:16 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+08:42:16 INFO  : 'configparams force-mem-access 1' command is executed.
+08:42:16 INFO  : Context for 'APU' is selected.
+08:42:16 INFO  : 'ps7_init' command is executed.
+08:42:16 INFO  : 'ps7_post_config' command is executed.
+08:42:16 INFO  : 'configparams force-mem-access 0' command is executed.
+08:42:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+08:42:16 INFO  : Memory regions updated for context APU
+08:42:16 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+09:31:54 INFO  : Disconnected from the channel tcfchan#2.
+12:05:42 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+12:05:44 INFO  : XSCT server has started successfully.
+12:05:45 INFO  : Successfully done setting XSCT server connection channel  
+12:05:45 INFO  : Successfully done setting SDK workspace  
+12:05:51 INFO  : Registering command handlers for SDK TCF services
+12:05:51 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+12:05:51 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+12:05:51 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574827446171,  Project:1574815178057
+12:05:51 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+12:05:51 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+12:05:55 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:05:57 INFO  : 
+12:05:58 INFO  : Updating hardware inferred compiler options for start.
+12:05:58 INFO  : Clearing existing target manager status.
+12:05:58 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+12:05:59 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+12:06:00 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+12:08:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:08:04 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:08:04 INFO  : 'jtag frequency' command is executed.
+12:08:04 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+12:08:04 INFO  : Context for 'APU' is selected.
+12:08:04 INFO  : System reset is completed.
+12:08:08 INFO  : 'after 3000' command is executed.
+12:08:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+12:08:22 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+12:08:22 INFO  : Context for 'APU' is selected.
+12:08:22 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+12:08:22 INFO  : 'configparams force-mem-access 1' command is executed.
+12:08:22 INFO  : Context for 'APU' is selected.
+12:08:22 INFO  : 'ps7_init' command is executed.
+12:08:22 INFO  : 'ps7_post_config' command is executed.
+12:08:22 INFO  : 'configparams force-mem-access 0' command is executed.
+12:08:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:08:23 INFO  : Memory regions updated for context APU
+12:08:23 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:40:31 INFO  : Disconnected from the channel tcfchan#1.
+16:44:43 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+16:44:45 INFO  : XSCT server has started successfully.
+16:44:46 INFO  : Successfully done setting XSCT server connection channel  
+16:44:46 INFO  : Successfully done setting SDK workspace  
+16:44:50 INFO  : Registering command handlers for SDK TCF services
+16:44:50 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+16:44:51 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+16:44:51 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574844240285,  Project:1574827446171
+16:44:51 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+16:44:51 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+16:44:54 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:44:56 INFO  : 
+16:44:57 INFO  : Updating hardware inferred compiler options for start.
+16:44:57 INFO  : Clearing existing target manager status.
+16:44:57 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+16:44:58 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:44:59 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+16:45:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:45:51 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+16:45:51 INFO  : 'jtag frequency' command is executed.
+16:45:51 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+16:45:51 INFO  : Context for 'APU' is selected.
+16:45:51 INFO  : System reset is completed.
+16:45:54 INFO  : 'after 3000' command is executed.
+16:45:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+16:46:09 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+16:46:09 INFO  : Context for 'APU' is selected.
+16:46:09 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+16:46:09 INFO  : 'configparams force-mem-access 1' command is executed.
+16:46:09 INFO  : Context for 'APU' is selected.
+16:46:09 INFO  : 'ps7_init' command is executed.
+16:46:09 INFO  : 'ps7_post_config' command is executed.
+16:46:09 INFO  : 'configparams force-mem-access 0' command is executed.
+16:46:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:46:09 INFO  : Memory regions updated for context APU
+16:46:09 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+17:16:09 INFO  : Disconnected from the channel tcfchan#1.
+01:52:06 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+01:52:08 INFO  : XSCT server has started successfully.
+01:52:08 INFO  : Successfully done setting XSCT server connection channel  
+01:52:08 INFO  : Successfully done setting SDK workspace  
+01:52:13 INFO  : Registering command handlers for SDK TCF services
+01:52:13 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+01:52:13 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+01:52:13 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574854157774,  Project:1574844240285
+01:52:13 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+01:52:13 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+01:52:17 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:52:19 INFO  : 
+01:52:20 INFO  : Updating hardware inferred compiler options for start.
+01:52:20 INFO  : Clearing existing target manager status.
+01:52:20 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+01:52:20 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+01:52:21 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:53:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:53:41 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+01:53:41 INFO  : 'jtag frequency' command is executed.
+01:53:41 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+01:53:41 INFO  : Context for 'APU' is selected.
+01:53:42 INFO  : System reset is completed.
+01:53:45 INFO  : 'after 3000' command is executed.
+01:53:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+01:53:59 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+01:53:59 INFO  : Context for 'APU' is selected.
+01:54:00 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+01:54:00 INFO  : 'configparams force-mem-access 1' command is executed.
+01:54:00 INFO  : Context for 'APU' is selected.
+01:54:00 INFO  : 'ps7_init' command is executed.
+01:54:00 INFO  : 'ps7_post_config' command is executed.
+01:54:00 INFO  : 'configparams force-mem-access 0' command is executed.
+01:54:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:54:00 INFO  : Memory regions updated for context APU
+01:54:00 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+02:49:40 INFO  : Disconnected from the channel tcfchan#1.
+08:56:45 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+08:56:48 INFO  : XSCT server has started successfully.
+08:56:49 INFO  : Successfully done setting XSCT server connection channel  
+08:56:49 INFO  : Successfully done setting SDK workspace  
+08:56:56 INFO  : Registering command handlers for SDK TCF services
+08:56:56 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+08:56:56 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+08:56:56 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574898246367,  Project:1574854157774
+08:56:56 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+08:56:57 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+08:57:00 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+08:57:04 INFO  : 
+08:57:05 INFO  : Updating hardware inferred compiler options for start.
+08:57:05 INFO  : Clearing existing target manager status.
+08:57:05 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+08:57:06 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+08:57:07 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+08:57:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+08:57:42 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+08:57:42 INFO  : 'jtag frequency' command is executed.
+08:57:42 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+08:57:42 INFO  : Context for 'APU' is selected.
+08:57:43 INFO  : System reset is completed.
+08:57:46 INFO  : 'after 3000' command is executed.
+08:57:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+08:58:01 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+08:58:01 INFO  : Context for 'APU' is selected.
+08:58:01 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+08:58:01 INFO  : 'configparams force-mem-access 1' command is executed.
+08:58:01 INFO  : Context for 'APU' is selected.
+08:58:01 INFO  : 'ps7_init' command is executed.
+08:58:01 INFO  : 'ps7_post_config' command is executed.
+08:58:01 INFO  : 'configparams force-mem-access 0' command is executed.
+08:58:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+08:58:01 INFO  : Memory regions updated for context APU
+08:58:01 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+09:58:58 INFO  : Disconnected from the channel tcfchan#1.
+01:49:14 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+01:49:17 INFO  : XSCT server has started successfully.
+01:49:17 INFO  : Successfully done setting XSCT server connection channel  
+01:49:18 INFO  : Successfully done setting SDK workspace  
+01:49:24 INFO  : Registering command handlers for SDK TCF services
+01:49:24 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+01:49:25 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+01:49:25 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574929611556,  Project:1574898246367
+01:49:25 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+01:49:25 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+01:49:28 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:49:32 INFO  : 
+01:49:33 INFO  : Updating hardware inferred compiler options for start.
+01:49:33 INFO  : Clearing existing target manager status.
+01:49:33 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+01:49:33 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+01:49:35 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:51:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:51:16 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+01:51:16 INFO  : 'jtag frequency' command is executed.
+01:51:16 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+01:51:16 INFO  : Context for 'APU' is selected.
+01:51:16 INFO  : System reset is completed.
+01:51:19 INFO  : 'after 3000' command is executed.
+01:51:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+01:51:34 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+01:51:34 INFO  : Context for 'APU' is selected.
+01:51:34 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+01:51:34 INFO  : 'configparams force-mem-access 1' command is executed.
+01:51:34 INFO  : Context for 'APU' is selected.
+01:51:34 INFO  : 'ps7_init' command is executed.
+01:51:34 INFO  : 'ps7_post_config' command is executed.
+01:51:34 INFO  : 'configparams force-mem-access 0' command is executed.
+01:51:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:51:34 INFO  : Memory regions updated for context APU
+01:51:34 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+09:38:29 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1574989715064,  Project:1574929611556
+09:38:29 INFO  : Project top_hw_platform_0's source hardware specification located at C:/AI/AIFPGA/sv/sv.sdk/top.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+09:38:44 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+09:38:48 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:38:51 INFO  : 
+09:38:52 INFO  : Updating hardware inferred compiler options for start.
+09:38:52 INFO  : Clearing existing target manager status.
+09:38:52 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+09:38:53 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:38:55 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+09:39:34 INFO  : Disconnected from the channel tcfchan#1.
+09:39:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:39:36 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+09:39:36 INFO  : 'jtag frequency' command is executed.
+09:39:36 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+09:39:38 INFO  : Context for 'APU' is selected.
+09:39:39 INFO  : System reset is completed.
+09:39:42 INFO  : 'after 3000' command is executed.
+09:39:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+09:39:56 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+09:39:56 INFO  : Context for 'APU' is selected.
+09:39:56 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+09:39:56 INFO  : 'configparams force-mem-access 1' command is executed.
+09:39:56 INFO  : Context for 'APU' is selected.
+09:39:56 INFO  : 'ps7_init' command is executed.
+09:39:56 INFO  : 'ps7_post_config' command is executed.
+09:39:56 INFO  : 'configparams force-mem-access 0' command is executed.
+09:39:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:39:57 INFO  : Memory regions updated for context APU
+09:39:57 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+17:07:44 INFO  : Disconnected from the channel tcfchan#2.
+01:54:11 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+01:54:14 INFO  : XSCT server has started successfully.
+01:54:15 INFO  : Successfully done setting XSCT server connection channel  
+01:54:15 INFO  : Successfully done setting SDK workspace  
+01:54:22 INFO  : Registering command handlers for SDK TCF services
+01:54:22 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+01:54:22 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+01:54:22 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1575027068990,  Project:1574989715064
+01:54:22 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+01:54:23 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+01:54:26 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+01:54:33 INFO  : 
+01:54:34 INFO  : Updating hardware inferred compiler options for start.
+01:54:34 INFO  : Clearing existing target manager status.
+01:54:34 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+01:54:34 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+01:54:36 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:55:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:55:40 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+01:55:40 INFO  : 'jtag frequency' command is executed.
+01:55:40 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+01:55:40 INFO  : Context for 'APU' is selected.
+01:55:41 INFO  : System reset is completed.
+01:55:44 INFO  : 'after 3000' command is executed.
+01:55:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+01:55:59 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+01:55:59 INFO  : Context for 'APU' is selected.
+01:55:59 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+01:55:59 INFO  : 'configparams force-mem-access 1' command is executed.
+01:55:59 INFO  : Context for 'APU' is selected.
+01:55:59 INFO  : 'ps7_init' command is executed.
+01:55:59 INFO  : 'ps7_post_config' command is executed.
+01:55:59 INFO  : 'configparams force-mem-access 0' command is executed.
+01:55:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:55:59 INFO  : Memory regions updated for context APU
+01:55:59 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+03:11:23 INFO  : Disconnected from the channel tcfchan#1.
+09:49:29 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+09:49:32 INFO  : XSCT server has started successfully.
+09:49:33 INFO  : Successfully done setting XSCT server connection channel  
+09:49:33 INFO  : Successfully done setting SDK workspace  
+09:49:39 INFO  : Registering command handlers for SDK TCF services
+09:49:39 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:49:40 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+09:49:40 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1575237484953,  Project:1575027068990
+09:49:40 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:49:40 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+09:49:43 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:49:47 INFO  : 
+09:49:48 INFO  : Updating hardware inferred compiler options for start.
+09:49:48 INFO  : Clearing existing target manager status.
+09:49:48 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+09:49:48 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:49:51 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+09:50:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:50:54 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+09:50:54 INFO  : 'jtag frequency' command is executed.
+09:50:54 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+09:50:54 INFO  : Context for 'APU' is selected.
+09:50:55 INFO  : System reset is completed.
+09:50:58 INFO  : 'after 3000' command is executed.
+09:50:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+09:51:12 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+09:51:12 INFO  : Context for 'APU' is selected.
+09:51:12 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+09:51:12 INFO  : 'configparams force-mem-access 1' command is executed.
+09:51:12 INFO  : Context for 'APU' is selected.
+09:51:13 INFO  : 'ps7_init' command is executed.
+09:51:13 INFO  : 'ps7_post_config' command is executed.
+09:51:13 INFO  : 'configparams force-mem-access 0' command is executed.
+09:51:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:51:13 INFO  : Memory regions updated for context APU
+09:51:13 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+10:00:26 INFO  : Disconnected from the channel tcfchan#1.
+10:00:47 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+10:00:49 INFO  : XSCT server has started successfully.
+10:00:49 INFO  : Successfully done setting XSCT server connection channel  
+10:00:49 INFO  : Successfully done setting SDK workspace  
+10:00:53 INFO  : Registering command handlers for SDK TCF services
+10:00:53 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+10:00:54 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+10:01:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:01:07 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+10:01:07 INFO  : 'jtag frequency' command is executed.
+10:01:07 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+10:01:07 INFO  : Context for 'APU' is selected.
+10:01:08 INFO  : System reset is completed.
+10:01:11 INFO  : 'after 3000' command is executed.
+10:01:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+10:01:25 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+10:01:25 INFO  : Context for 'APU' is selected.
+10:01:25 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+10:01:25 INFO  : 'configparams force-mem-access 1' command is executed.
+10:01:25 INFO  : Context for 'APU' is selected.
+10:01:26 INFO  : 'ps7_init' command is executed.
+10:01:26 INFO  : 'ps7_post_config' command is executed.
+10:01:26 INFO  : 'configparams force-mem-access 0' command is executed.
+10:01:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:01:26 INFO  : Memory regions updated for context APU
+10:01:26 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+10:02:44 INFO  : Disconnected from the channel tcfchan#1.
+10:02:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:02:45 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+10:02:45 INFO  : 'jtag frequency' command is executed.
+10:02:45 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+10:02:45 INFO  : Context for 'APU' is selected.
+10:02:46 INFO  : System reset is completed.
+10:02:49 INFO  : 'after 3000' command is executed.
+10:02:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+10:03:03 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+10:03:03 INFO  : Context for 'APU' is selected.
+10:03:06 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+10:03:06 INFO  : 'configparams force-mem-access 1' command is executed.
+10:03:06 INFO  : Context for 'APU' is selected.
+10:03:06 INFO  : 'ps7_init' command is executed.
+10:03:06 INFO  : 'ps7_post_config' command is executed.
+10:03:06 INFO  : 'configparams force-mem-access 0' command is executed.
+10:03:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:03:06 INFO  : Memory regions updated for context APU
+10:03:06 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+11:52:25 INFO  : Disconnected from the channel tcfchan#2.
+14:06:04 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+14:06:07 INFO  : XSCT server has started successfully.
+14:06:08 INFO  : Successfully done setting XSCT server connection channel  
+14:06:08 INFO  : Successfully done setting SDK workspace  
+14:06:14 INFO  : Registering command handlers for SDK TCF services
+14:06:14 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+14:06:15 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+14:06:15 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1575265117877,  Project:1575237484953
+14:06:15 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+14:06:15 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+14:06:43 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:06:46 INFO  : 
+14:06:47 INFO  : Updating hardware inferred compiler options for start.
+14:06:47 INFO  : Clearing existing target manager status.
+14:06:47 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+14:06:47 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+14:06:48 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+14:07:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:07:25 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:07:25 INFO  : 'jtag frequency' command is executed.
+14:07:25 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+14:07:25 INFO  : Context for 'APU' is selected.
+14:07:25 INFO  : System reset is completed.
+14:07:28 INFO  : 'after 3000' command is executed.
+14:07:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:07:43 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+14:07:43 INFO  : Context for 'APU' is selected.
+14:07:43 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+14:07:43 INFO  : 'configparams force-mem-access 1' command is executed.
+14:07:43 INFO  : Context for 'APU' is selected.
+14:07:43 INFO  : 'ps7_init' command is executed.
+14:07:43 INFO  : 'ps7_post_config' command is executed.
+14:07:43 INFO  : 'configparams force-mem-access 0' command is executed.
+14:07:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:07:43 INFO  : Memory regions updated for context APU
+14:07:43 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:44:29 INFO  : Disconnected from the channel tcfchan#1.
+00:59:15 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+00:59:18 INFO  : XSCT server has started successfully.
+00:59:18 INFO  : Successfully done setting XSCT server connection channel  
+00:59:19 INFO  : Successfully done setting SDK workspace  
+00:59:25 INFO  : Registering command handlers for SDK TCF services
+00:59:25 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+00:59:26 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+00:59:26 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1575277916358,  Project:1575265117877
+00:59:26 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+00:59:26 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+00:59:29 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+00:59:33 INFO  : 
+00:59:34 INFO  : Updating hardware inferred compiler options for start.
+00:59:34 INFO  : Clearing existing target manager status.
+00:59:34 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+00:59:34 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+00:59:35 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+01:02:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:02:49 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+01:02:49 INFO  : 'jtag frequency' command is executed.
+01:02:49 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+01:02:49 INFO  : Context for 'APU' is selected.
+01:02:49 INFO  : System reset is completed.
+01:02:52 INFO  : 'after 3000' command is executed.
+01:02:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+01:03:07 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+01:03:07 INFO  : Context for 'APU' is selected.
+01:03:07 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+01:03:07 INFO  : 'configparams force-mem-access 1' command is executed.
+01:03:07 INFO  : Context for 'APU' is selected.
+01:03:07 INFO  : 'ps7_init' command is executed.
+01:03:07 INFO  : 'ps7_post_config' command is executed.
+01:03:07 INFO  : 'configparams force-mem-access 0' command is executed.
+01:03:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:03:07 INFO  : Memory regions updated for context APU
+01:03:07 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+01:53:44 INFO  : Disconnected from the channel tcfchan#1.
+04:16:04 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+04:16:06 INFO  : XSCT server has started successfully.
+04:16:06 INFO  : Successfully done setting XSCT server connection channel  
+04:16:06 INFO  : Successfully done setting SDK workspace  
+04:16:12 INFO  : Registering command handlers for SDK TCF services
+04:16:12 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+04:16:12 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+04:16:12 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1575317136663,  Project:1575277916358
+04:16:12 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+04:16:12 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+04:16:16 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+04:16:20 INFO  : 
+04:16:21 INFO  : Updating hardware inferred compiler options for start.
+04:16:21 INFO  : Clearing existing target manager status.
+04:16:21 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+04:16:21 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+04:16:22 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+04:17:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:17:38 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+04:17:38 INFO  : 'jtag frequency' command is executed.
+04:17:38 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+04:17:38 INFO  : Context for 'APU' is selected.
+04:17:39 INFO  : System reset is completed.
+04:17:42 INFO  : 'after 3000' command is executed.
+04:17:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+04:17:56 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+04:17:56 INFO  : Context for 'APU' is selected.
+04:17:56 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+04:17:56 INFO  : 'configparams force-mem-access 1' command is executed.
+04:17:56 INFO  : Context for 'APU' is selected.
+04:17:56 INFO  : 'ps7_init' command is executed.
+04:17:57 INFO  : 'ps7_post_config' command is executed.
+04:17:57 INFO  : 'configparams force-mem-access 0' command is executed.
+04:17:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+04:17:57 INFO  : Memory regions updated for context APU
+04:17:57 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+10:45:56 INFO  : Disconnected from the channel tcfchan#1.
+03:58:48 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+03:58:50 INFO  : XSCT server has started successfully.
+03:58:51 INFO  : Successfully done setting XSCT server connection channel  
+03:58:51 INFO  : Successfully done setting SDK workspace  
+03:58:56 INFO  : Registering command handlers for SDK TCF services
+03:58:56 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+03:58:57 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+03:58:57 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1575402041514,  Project:1575317136663
+03:58:57 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+03:58:57 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+03:59:00 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+03:59:04 INFO  : 
+03:59:05 INFO  : Updating hardware inferred compiler options for start.
+03:59:05 INFO  : Clearing existing target manager status.
+03:59:05 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+03:59:05 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+03:59:06 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+04:01:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:01:12 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+04:01:12 INFO  : 'jtag frequency' command is executed.
+04:01:12 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+04:01:12 INFO  : Context for 'APU' is selected.
+04:01:13 INFO  : System reset is completed.
+04:01:16 INFO  : 'after 3000' command is executed.
+04:01:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+04:01:31 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+04:01:31 INFO  : Context for 'APU' is selected.
+04:01:31 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+04:01:31 INFO  : 'configparams force-mem-access 1' command is executed.
+04:01:31 INFO  : Context for 'APU' is selected.
+04:01:31 INFO  : 'ps7_init' command is executed.
+04:01:31 INFO  : 'ps7_post_config' command is executed.
+04:01:31 INFO  : 'configparams force-mem-access 0' command is executed.
+04:01:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+04:01:31 INFO  : Memory regions updated for context APU
+04:01:31 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+04:43:17 INFO  : Disconnected from the channel tcfchan#1.
+05:31:45 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+05:31:48 INFO  : XSCT server has started successfully.
+05:31:50 INFO  : Successfully done setting XSCT server connection channel  
+05:31:50 INFO  : Successfully done setting SDK workspace  
+05:31:56 INFO  : Registering command handlers for SDK TCF services
+05:31:56 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+05:31:56 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+05:31:56 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1576265908390,  Project:1575402041514
+05:31:56 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+05:31:56 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+05:31:58 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+05:32:02 INFO  : 
+05:32:03 INFO  : Updating hardware inferred compiler options for start.
+05:32:03 INFO  : Clearing existing target manager status.
+05:32:03 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+05:32:04 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+05:32:05 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+05:33:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+05:33:47 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+05:33:47 INFO  : 'jtag frequency' command is executed.
+05:33:47 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+05:33:47 INFO  : Context for 'APU' is selected.
+05:33:47 INFO  : System reset is completed.
+05:33:50 INFO  : 'after 3000' command is executed.
+05:33:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+05:34:05 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+05:34:05 INFO  : Context for 'APU' is selected.
+05:34:05 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+05:34:05 INFO  : 'configparams force-mem-access 1' command is executed.
+05:34:05 INFO  : Context for 'APU' is selected.
+05:34:05 INFO  : 'ps7_init' command is executed.
+05:34:05 INFO  : 'ps7_post_config' command is executed.
+05:34:05 INFO  : 'configparams force-mem-access 0' command is executed.
+05:34:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+05:34:05 INFO  : Memory regions updated for context APU
+05:34:05 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+05:50:27 INFO  : Disconnected from the channel tcfchan#1.
+09:38:56 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+09:38:58 INFO  : XSCT server has started successfully.
+09:38:58 INFO  : Successfully done setting XSCT server connection channel  
+09:38:58 INFO  : Successfully done setting SDK workspace  
+09:39:03 INFO  : Registering command handlers for SDK TCF services
+09:39:03 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:39:03 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+09:39:03 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1576286935424,  Project:1576265908390
+09:39:03 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:39:03 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+09:39:06 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:39:07 INFO  : 
+09:39:09 INFO  : Updating hardware inferred compiler options for start.
+09:39:09 INFO  : Clearing existing target manager status.
+09:39:09 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+09:39:09 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:39:10 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+09:39:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:39:49 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+09:39:49 INFO  : 'jtag frequency' command is executed.
+09:39:49 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+09:39:49 INFO  : Context for 'APU' is selected.
+09:39:49 INFO  : System reset is completed.
+09:39:52 INFO  : 'after 3000' command is executed.
+09:39:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+09:40:07 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+09:40:07 INFO  : Context for 'APU' is selected.
+09:40:07 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+09:40:07 INFO  : 'configparams force-mem-access 1' command is executed.
+09:40:07 INFO  : Context for 'APU' is selected.
+09:40:07 INFO  : 'ps7_init' command is executed.
+09:40:07 INFO  : 'ps7_post_config' command is executed.
+09:40:07 INFO  : 'configparams force-mem-access 0' command is executed.
+09:40:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:40:07 INFO  : Memory regions updated for context APU
+09:40:07 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+12:30:16 INFO  : Disconnected from the channel tcfchan#1.
+12:30:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:30:18 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:30:18 INFO  : 'jtag frequency' command is executed.
+12:30:18 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+12:30:18 INFO  : Context for 'APU' is selected.
+12:30:18 INFO  : System reset is completed.
+12:30:21 INFO  : 'after 3000' command is executed.
+12:30:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+12:30:36 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+12:30:36 INFO  : Context for 'APU' is selected.
+12:30:38 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+12:30:38 INFO  : 'configparams force-mem-access 1' command is executed.
+12:30:38 INFO  : Context for 'APU' is selected.
+12:30:38 INFO  : 'ps7_init' command is executed.
+12:30:38 INFO  : 'ps7_post_config' command is executed.
+12:30:38 INFO  : 'configparams force-mem-access 0' command is executed.
+12:30:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:30:38 INFO  : Memory regions updated for context APU
+12:30:38 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:20:53 INFO  : Disconnected from the channel tcfchan#2.
+13:25:21 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+13:25:23 INFO  : XSCT server has started successfully.
+13:25:23 INFO  : Successfully done setting XSCT server connection channel  
+13:25:23 INFO  : Successfully done setting SDK workspace  
+13:25:28 INFO  : Registering command handlers for SDK TCF services
+13:25:28 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+13:25:28 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+13:25:28 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1576300853780,  Project:1576286935424
+13:25:28 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+13:25:28 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+13:25:30 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:25:33 INFO  : 
+13:25:34 INFO  : Updating hardware inferred compiler options for start.
+13:25:34 INFO  : Clearing existing target manager status.
+13:25:34 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+13:25:35 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:25:36 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:26:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:26:08 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:26:08 INFO  : 'jtag frequency' command is executed.
+13:26:08 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+13:26:08 INFO  : Context for 'APU' is selected.
+13:26:08 INFO  : System reset is completed.
+13:26:11 INFO  : 'after 3000' command is executed.
+13:26:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+13:26:26 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+13:26:26 INFO  : Context for 'APU' is selected.
+13:26:26 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+13:26:26 INFO  : 'configparams force-mem-access 1' command is executed.
+13:26:26 INFO  : Context for 'APU' is selected.
+13:26:26 INFO  : 'ps7_init' command is executed.
+13:26:26 INFO  : 'ps7_post_config' command is executed.
+13:26:26 INFO  : 'configparams force-mem-access 0' command is executed.
+13:26:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:26:26 INFO  : Memory regions updated for context APU
+13:26:26 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+13:30:09 INFO  : Disconnected from the channel tcfchan#1.
+05:25:01 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+05:25:03 INFO  : XSCT server has started successfully.
+05:25:03 INFO  : Successfully done setting XSCT server connection channel  
+05:25:03 INFO  : Successfully done setting SDK workspace  
+05:25:08 INFO  : Registering command handlers for SDK TCF services
+05:25:08 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+05:25:08 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+05:27:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+05:27:43 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+05:27:43 INFO  : 'jtag frequency' command is executed.
+05:27:43 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+05:27:44 INFO  : Context for 'APU' is selected.
+05:27:44 INFO  : System reset is completed.
+05:27:47 INFO  : 'after 3000' command is executed.
+05:27:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+05:28:01 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+05:28:02 INFO  : Context for 'APU' is selected.
+05:28:02 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+05:28:02 INFO  : 'configparams force-mem-access 1' command is executed.
+05:28:02 INFO  : Context for 'APU' is selected.
+05:28:02 INFO  : 'ps7_init' command is executed.
+05:28:02 INFO  : 'ps7_post_config' command is executed.
+05:28:02 INFO  : 'configparams force-mem-access 0' command is executed.
+05:28:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+05:28:02 INFO  : Memory regions updated for context APU
+05:28:02 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+09:44:34 INFO  : Disconnected from the channel tcfchan#1.
+09:44:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:44:35 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+09:44:35 INFO  : 'jtag frequency' command is executed.
+09:44:35 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+09:44:35 INFO  : Context for 'APU' is selected.
+09:44:35 INFO  : System reset is completed.
+09:44:38 INFO  : 'after 3000' command is executed.
+09:44:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+09:44:53 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+09:44:53 INFO  : Context for 'APU' is selected.
+09:44:55 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+09:44:55 INFO  : 'configparams force-mem-access 1' command is executed.
+09:44:55 INFO  : Context for 'APU' is selected.
+09:44:55 INFO  : 'ps7_init' command is executed.
+09:44:55 INFO  : 'ps7_post_config' command is executed.
+09:44:55 INFO  : 'configparams force-mem-access 0' command is executed.
+09:44:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:44:55 INFO  : Memory regions updated for context APU
+09:44:55 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:39:23 INFO  : Disconnected from the channel tcfchan#2.
+14:39:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:39:24 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:39:24 INFO  : 'jtag frequency' command is executed.
+14:39:24 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+14:39:24 INFO  : Context for 'APU' is selected.
+14:39:24 INFO  : System reset is completed.
+14:39:27 INFO  : 'after 3000' command is executed.
+14:39:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+14:39:42 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+14:39:42 INFO  : Context for 'APU' is selected.
+14:39:43 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+14:39:43 INFO  : 'configparams force-mem-access 1' command is executed.
+14:39:43 INFO  : Context for 'APU' is selected.
+14:39:43 INFO  : 'ps7_init' command is executed.
+14:39:43 INFO  : 'ps7_post_config' command is executed.
+14:39:43 INFO  : 'configparams force-mem-access 0' command is executed.
+14:39:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:39:43 INFO  : Memory regions updated for context APU
+14:39:43 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+10:31:59 INFO  : Disconnected from the channel tcfchan#3.
+09:30:00 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+09:30:04 INFO  : XSCT server has started successfully.
+09:30:07 INFO  : Successfully done setting XSCT server connection channel  
+09:30:07 INFO  : Successfully done setting SDK workspace  
+09:30:16 INFO  : Registering command handlers for SDK TCF services
+09:30:16 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:30:17 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+09:30:17 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1577755134999,  Project:1576300853780
+09:30:17 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+09:30:17 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+09:30:46 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:30:52 INFO  : 
+09:30:53 INFO  : Updating hardware inferred compiler options for start.
+09:30:53 INFO  : Clearing existing target manager status.
+09:30:53 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+09:30:54 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:30:55 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+09:35:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:35:41 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+09:35:41 INFO  : 'jtag frequency' command is executed.
+09:35:41 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+09:35:41 INFO  : Context for 'APU' is selected.
+09:35:41 INFO  : System reset is completed.
+09:35:44 INFO  : 'after 3000' command is executed.
+09:35:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+09:35:59 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+09:35:59 INFO  : Context for 'APU' is selected.
+09:35:59 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+09:35:59 INFO  : 'configparams force-mem-access 1' command is executed.
+09:35:59 INFO  : Context for 'APU' is selected.
+09:35:59 INFO  : 'ps7_init' command is executed.
+09:35:59 INFO  : 'ps7_post_config' command is executed.
+09:35:59 INFO  : 'configparams force-mem-access 0' command is executed.
+09:35:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:35:59 INFO  : Memory regions updated for context APU
+09:35:59 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+10:57:39 INFO  : Disconnected from the channel tcfchan#1.
+13:46:39 INFO  : Launching XSCT server: xsct.bat -interactive C:\AI\AIFPGA\sv\sv.sdk\temp_xsdb_launch_script.tcl
+13:46:42 INFO  : XSCT server has started successfully.
+13:46:43 INFO  : Successfully done setting XSCT server connection channel  
+13:46:43 INFO  : Successfully done setting SDK workspace  
+13:46:50 INFO  : Registering command handlers for SDK TCF services
+13:46:50 INFO  : Processing command line option -hwspec C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+13:46:50 INFO  : Checking for hwspec changes in the project top_hw_platform_0.
+13:46:50 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1577941906783,  Project:1577755134999
+13:46:50 INFO  : The hardware specification for project 'top_hw_platform_0' is different from C:/AI/AIFPGA/sv/sv.sdk/top.hdf.
+13:46:51 INFO  : Copied contents of C:/AI/AIFPGA/sv/sv.sdk/top.hdf into \top_hw_platform_0\system.hdf.
+13:46:54 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:46:57 INFO  : 
+13:46:59 INFO  : Updating hardware inferred compiler options for start.
+13:46:59 INFO  : Clearing existing target manager status.
+13:46:59 INFO  : Closing and re-opening the MSS file of ther project start_bsp
+13:46:59 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:47:01 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:48:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:48:24 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:48:24 INFO  : 'jtag frequency' command is executed.
+13:48:24 INFO  : Sourcing of 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl' is done.
+13:48:25 INFO  : Context for 'APU' is selected.
+13:48:25 INFO  : System reset is completed.
+13:48:28 INFO  : 'after 3000' command is executed.
+13:48:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+13:48:43 INFO  : FPGA configured successfully with bitstream "C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit"
+13:48:43 INFO  : Context for 'APU' is selected.
+13:48:43 INFO  : Hardware design information is loaded from 'C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf'.
+13:48:43 INFO  : 'configparams force-mem-access 1' command is executed.
+13:48:43 INFO  : Context for 'APU' is selected.
+13:48:43 INFO  : 'ps7_init' command is executed.
+13:48:43 INFO  : 'ps7_post_config' command is executed.
+13:48:43 INFO  : 'configparams force-mem-access 0' command is executed.
+13:48:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
+fpga -file C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+loadhw -hw C:/AI/AIFPGA/sv/sv.sdk/top_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:48:43 INFO  : Memory regions updated for context APU
+13:48:43 INFO  : Launch script is exported to file 'C:\AI\AIFPGA\sv\sv.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_on_local.tcl'
+14:45:38 INFO  : Disconnected from the channel tcfchan#1.
