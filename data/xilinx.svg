@@ -1,0 +1,1367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="595.27557"
+   height="841.88977"
+   id="svg8894"
+   viewBox="0 0 595.27557 841.88977"
+   sodipodi:docname="xilinx.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
+  <metadata
+     id="metadata8898">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview8896"
+     showgrid="false"
+     inkscape:zoom="1.0096334"
+     inkscape:cx="101.90923"
+     inkscape:cy="174.16606"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8894" />
+  <g
+     id="Layer1939">
+    <defs
+       id="defs8569">
+      <linearGradient
+         id="grad623">
+        <stop
+           offset="0%"
+           stop-color="#ffffff"
+           stop-opacity="1.0000"
+           id="stop8563" />
+        <stop
+           offset="100%"
+           stop-color="#f0f0f0"
+           stop-opacity="1.0000"
+           id="stop8565" />
+      </linearGradient>
+      <linearGradient
+         xlink:href="#grad623"
+         id="grad624"
+         x1="0"
+         y1="0"
+         x2="0"
+         y2="1"
+         gradientUnits="objectBoundingBox" />
+    </defs>
+    <path
+       d="m 73.7008,399.685 h 73.7008 V 246.6142 H 73.7008 Z"
+       style="fill:url(#grad624);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       id="path8571" />
+    <path
+       d="m 73.7008,399.685 h 73.7008 V 246.6142 H 73.7008 Z"
+       style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.75, 1.25, 2.75, 1.25"
+       id="path8573" />
+  </g>
+  <g
+     id="Layer1940">
+    <defs
+       id="defs8582">
+      <linearGradient
+         id="grad625">
+        <stop
+           offset="0%"
+           stop-color="#ffffff"
+           stop-opacity="1.0000"
+           id="stop8576" />
+        <stop
+           offset="100%"
+           stop-color="#f0f0f0"
+           stop-opacity="1.0000"
+           id="stop8578" />
+      </linearGradient>
+      <linearGradient
+         xlink:href="#grad625"
+         id="grad626"
+         x1="0"
+         y1="0"
+         x2="0"
+         y2="1"
+         gradientUnits="objectBoundingBox" />
+    </defs>
+    <path
+       d="M 181.4173,399.685 H 504.5669 V 209.0551 H 181.4173 Z"
+       style="fill:url(#grad626);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       id="path8584" />
+    <path
+       d="M 181.4173,399.685 H 504.5669 V 209.0551 H 181.4173 Z"
+       style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.75, 1.25, 2.75, 1.25"
+       id="path8586" />
+  </g>
+  <g
+     id="Layer1941">
+    <g
+       id="Layer1942">
+      <defs
+         id="defs8595">
+        <linearGradient
+           id="grad627">
+          <stop
+             offset="0%"
+             stop-color="#ff0000"
+             stop-opacity="1.0000"
+             id="stop8589" />
+          <stop
+             offset="100%"
+             stop-color="#e10000"
+             stop-opacity="1.0000"
+             id="stop8591" />
+        </linearGradient>
+        <linearGradient
+           xlink:href="#grad627"
+           id="grad628"
+           x1="0"
+           y1="0"
+           x2="0"
+           y2="1"
+           gradientUnits="objectBoundingBox" />
+      </defs>
+      <path
+         d="m 196.2992,256.5354 h 56.6929 v -42.5197 h -56.6929 z"
+         style="fill:url(#grad628);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+         id="path8597" />
+      <path
+         d="m 196.2992,256.5354 h 56.6929 v -42.5197 h -56.6929 z"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         id="path8599" />
+    </g>
+    <text
+       x="208.29919"
+       y="241.2756"
+       id="text8604"><tspan
+         font-family="Calibri"
+         font-size="24px"
+         fill="#000000"
+         fill-opacity="1"
+         stroke-opacity="1"
+         id="tspan8602">FIE</tspan></text>
+  </g>
+  <g
+     id="Layer1943">
+    <g
+       id="Layer1944">
+      <defs
+         id="defs8613">
+        <linearGradient
+           id="grad629">
+          <stop
+             offset="0%"
+             stop-color="#ff0000"
+             stop-opacity="1.0000"
+             id="stop8607" />
+          <stop
+             offset="100%"
+             stop-color="#e10000"
+             stop-opacity="1.0000"
+             id="stop8609" />
+        </linearGradient>
+        <linearGradient
+           xlink:href="#grad629"
+           id="grad630"
+           x1="0"
+           y1="0"
+           x2="0"
+           y2="1"
+           gradientUnits="objectBoundingBox" />
+      </defs>
+      <path
+         d="m 196.2992,384.0945 h 56.6929 v -42.5197 h -56.6929 z"
+         style="fill:url(#grad630);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+         id="path8615" />
+      <path
+         d="m 196.2992,384.0945 h 56.6929 v -42.5197 h -56.6929 z"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         id="path8617" />
+    </g>
+    <text
+       x="221.74011"
+       y="356.83459"
+       id="text8622"
+       style="text-anchor:middle;text-align:center;"><tspan
+         sodipodi:role="line"
+         id="tspan14920"
+         x="200.29919"
+         y="356.83459"><tspan
+           font-family="Calibri"
+           font-size="18px"
+           fill="#000000"
+           fill-opacity="1"
+           stroke-opacity="1"
+           id="tspan8620"
+           style="text-anchor:middle;text-align:center;">Net</tspan></tspan><tspan
+         sodipodi:role="line"
+         id="tspan14922"
+         x="200.29919"
+         y="379.33459"><tspan
+           font-family="Calibri"
+           font-size="18px"
+           fill="#000000"
+           fill-opacity="1"
+           stroke-opacity="1"
+           id="tspan14924"
+           style="text-anchor:middle;text-align:center;">Driver</tspan></tspan></text>
+  </g>
+  <g
+     id="Layer1945">
+    <g
+       id="Layer1946">
+      <defs
+         id="defs8631">
+        <linearGradient
+           id="grad631">
+          <stop
+             offset="0%"
+             stop-color="#ff0000"
+             stop-opacity="1.0000"
+             id="stop8625" />
+          <stop
+             offset="100%"
+             stop-color="#e10000"
+             stop-opacity="1.0000"
+             id="stop8627" />
+        </linearGradient>
+        <linearGradient
+           xlink:href="#grad631"
+           id="grad632"
+           x1="0"
+           y1="0"
+           x2="0"
+           y2="1"
+           gradientUnits="objectBoundingBox" />
+      </defs>
+      <path
+         d="m 433.7008,395.4331 h 56.6929 v -42.5197 h -56.6929 z"
+         style="fill:url(#grad632);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+         id="path8633" />
+      <path
+         d="m 433.7008,395.4331 h 56.6929 v -42.5197 h -56.6929 z"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         id="path8635" />
+    </g>
+    <text
+       x="441.70081"
+       y="378.17319"
+       id="text8640"><tspan
+         font-family="Calibri"
+         font-size="18px"
+         fill="#000000"
+         fill-opacity="1"
+         stroke-opacity="1"
+         id="tspan8638">ZYNQ</tspan></text>
+  </g>
+  <g
+     id="Layer1947">
+    <g
+       id="Layer1948">
+      <defs
+         id="defs8649">
+        <linearGradient
+           id="grad633">
+          <stop
+             offset="0%"
+             stop-color="#ff0000"
+             stop-opacity="1.0000"
+             id="stop8643" />
+          <stop
+             offset="100%"
+             stop-color="#e10000"
+             stop-opacity="1.0000"
+             id="stop8645" />
+        </linearGradient>
+        <linearGradient
+           xlink:href="#grad633"
+           id="grad634"
+           x1="0"
+           y1="0"
+           x2="0"
+           y2="1"
+           gradientUnits="objectBoundingBox" />
+      </defs>
+      <path
+         d="m 433.7008,282.0472 h 56.6929 v -42.5196 h -56.6929 z"
+         style="fill:url(#grad634);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+         id="path8651" />
+      <path
+         d="m 433.7008,282.0472 h 56.6929 v -42.5196 h -56.6929 z"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         id="path8653" />
+    </g>
+    <text
+       x="445.70081"
+       y="264.78741"
+       id="text8658"><tspan
+         font-family="Calibri"
+         font-size="18px"
+         fill="#000000"
+         fill-opacity="1"
+         stroke-opacity="1"
+         id="tspan8656">MIG</tspan></text>
+  </g>
+  <g
+     id="Layer1949">
+    <g
+       id="Layer1950">
+      <defs
+         id="defs8667">
+        <linearGradient
+           id="grad635">
+          <stop
+             offset="0%"
+             stop-color="#ff0000"
+             stop-opacity="1.0000"
+             id="stop8661" />
+          <stop
+             offset="100%"
+             stop-color="#e10000"
+             stop-opacity="1.0000"
+             id="stop8663" />
+        </linearGradient>
+        <linearGradient
+           xlink:href="#grad635"
+           id="grad636"
+           x1="0"
+           y1="0"
+           x2="0"
+           y2="1"
+           gradientUnits="objectBoundingBox" />
+      </defs>
+      <path
+         d="m 403.2283,310.3937 v -99.2126 h -22.6771 v 99.2126 z"
+         style="fill:url(#grad636);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+         id="path8669" />
+      <path
+         d="m 403.2283,310.3937 v -99.2126 h -22.6771 v 99.2126 z"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         id="path8671" />
+    </g>
+    <text
+       x="-304.39368"
+       y="393.8898"
+       transform="rotate(-90)"
+       id="text8676"><tspan
+         font-family="Calibri"
+         font-size="12px"
+         fill="#000000"
+         fill-opacity="1"
+         stroke-opacity="1"
+         id="tspan8674">AXI SmartConnect</tspan></text>
+  </g>
+  <defs
+     id="defs8682">
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker15154"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path15152"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#404040;stroke-width:1pt;stroke-opacity:1;fill:#008000;fill-opacity:1"
+         transform="scale(-0.4)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker14952"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#404040;stroke-width:1pt;stroke-opacity:1;fill:#008000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path14950" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker14689"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleInM"
+       inkscape:collect="always">
+      <path
+         transform="scale(-0.4)"
+         style="fill-rule:evenodd;stroke:#0070c0;stroke-width:1pt;stroke-opacity:1;fill:#0070c0;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path14687" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker14441"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path14439"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#0070c0;stroke-width:1pt;stroke-opacity:1;fill:#0070c0;fill-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker14053"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path14051"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(-0.4)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker13821"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path13819" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker13457"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleInM"
+       inkscape:collect="always">
+      <path
+         transform="scale(-0.4)"
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path13455" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker13341"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path13339"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker12069"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path12067"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(-0.4)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker11909"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path11907" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker11743"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path11741"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker11601"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path11599"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker11441"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path11439"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ff0000;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.3) rotate(180) translate(-2.3,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker11305"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path11303" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutS"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutS"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path9629"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker11011"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path11009"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ff0000;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.3) rotate(180) translate(-2.3,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Send"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path9514"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#ff0000;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.3) rotate(180) translate(-2.3,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker10789"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path10787" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker10647"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path10645"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(-0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker10553"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path10551"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker10405"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleInM"
+       inkscape:collect="always">
+      <path
+         transform="scale(-0.4)"
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path10403" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker10301"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path10299" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleInM"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path9617"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#0070c0;stroke-width:1pt;stroke-opacity:1;fill:#0070c0;fill-opacity:1"
+         transform="scale(-0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInS"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleInS"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path9620"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(-0.2)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker10015"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path10013"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#0070c0;stroke-width:1pt;stroke-opacity:1;fill:#0070c0;fill-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker9937"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path9935"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#0070c0;stroke-width:1pt;stroke-opacity:1;fill:#0070c0;fill-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutM"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path9626"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#0070c0;stroke-width:1pt;stroke-opacity:1;fill:#0070c0;fill-opacity:1"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker9823"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path9821"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#0070c0;stroke-opacity:1;fill:#0070c0;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Send"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path9496"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1;fill:#ff0000;fill-opacity:1"
+         transform="scale(0.2) rotate(180) translate(6,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Sstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Sstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path9511"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#0070c0;stroke-opacity:1;fill:#0070c0;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.3) translate(-2.3,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path9508"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#0070c0;stroke-opacity:1;fill:#0070c0;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       id="startMarker48"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5">
+      <polyline
+         points="10,0 0,5 10,10 9,5"
+         fill="solid"
+         id="polyline8679" />
+    </marker>
+  </defs>
+  <defs
+     id="defs8687">
+    <marker
+       id="endMarker81"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="1"
+       refY="5">
+      <polyline
+         points="0,0 10,5 0,10 1,5"
+         fill="solid"
+         id="polyline8684" />
+    </marker>
+  </defs>
+  <path
+     d="m 260.59908,224.73502 111.26603,-0.0914"
+     style="fill:none;stroke:#ff0000;stroke-width:2.9046;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-start:url(#marker12069);marker-end:url(#marker11909)"
+     id="path8689" />
+  <defs
+     id="defs8694">
+    <marker
+       id="endMarker82"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="1"
+       refY="5">
+      <polyline
+         points="0,0 10,5 0,10 1,5"
+         fill="solid"
+         id="polyline8691" />
+    </marker>
+  </defs>
+  <path
+     d="m 344.98295,374.1732 h 80.28292"
+     style="fill:none;stroke:#0070c0;stroke-width:2.85556;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#TriangleOutM)"
+     id="path8696" />
+  <defs
+     id="defs8701">
+    <marker
+       id="startMarker49"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5">
+      <polyline
+         points="10,0 0,5 10,10 9,5"
+         fill="solid"
+         id="polyline8698" />
+    </marker>
+  </defs>
+  <path
+     d="m 256.09733,246.57201 h 89.00456 v 127.64537"
+     style="fill:none;stroke:#0070c0;stroke-width:1.4726;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-start:url(#TriangleInM)"
+     id="path8703" />
+  <defs
+     id="defs8708">
+    <marker
+       id="endMarker83"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="1"
+       refY="5">
+      <polyline
+         points="0,0 10,5 0,10 1,5"
+         fill="solid"
+         id="polyline8705" />
+    </marker>
+  </defs>
+  <path
+     d="m 252.95734,374.1732 h 87.74863"
+     style="fill:none;stroke:#0070c0;stroke-width:1.46393;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-end:url(#marker9937)"
+     id="path8710" />
+  <defs
+     id="defs8715">
+    <marker
+       id="startMarker50"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5">
+      <polyline
+         points="10,0 0,5 10,10 9,5"
+         fill="solid"
+         id="polyline8712" />
+    </marker>
+  </defs>
+  <defs
+     id="defs8720">
+    <marker
+       id="endMarker84"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="1"
+       refY="5">
+      <polyline
+         points="0,0 10,5 0,10 1,5"
+         fill="solid"
+         id="polyline8717" />
+    </marker>
+  </defs>
+  <path
+     d="m 261.20262,353.12781 h 43.51273 v -64.20832 h 68.37717"
+     style="fill:none;stroke:#ff0000;stroke-width:2.81914;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-start:url(#marker10405);marker-end:url(#marker10301)"
+     id="path8722" />
+  <defs
+     id="defs8727">
+    <marker
+       id="startMarker51"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5">
+      <polyline
+         points="10,0 0,5 10,10 9,5"
+         fill="solid"
+         id="polyline8724" />
+    </marker>
+  </defs>
+  <defs
+     id="defs8732">
+    <marker
+       id="endMarker85"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="1"
+       refY="5">
+      <polyline
+         points="0,0 10,5 0,10 1,5"
+         fill="solid"
+         id="polyline8729" />
+    </marker>
+  </defs>
+  <path
+     d="m 408.95725,260.7874 h 17.73303"
+     style="fill:none;stroke:#ff0000;stroke-width:2.28854;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-start:url(#marker13457);marker-end:url(#marker13341)"
+     id="path8734" />
+  <defs
+     id="defs8739">
+    <marker
+       id="startMarker52"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5">
+      <polyline
+         points="10,0 0,5 10,10 9,5"
+         fill="solid"
+         id="polyline8736" />
+    </marker>
+  </defs>
+  <defs
+     id="defs8744">
+    <marker
+       id="endMarker86"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="1"
+       refY="5">
+      <polyline
+         points="0,0 10,5 0,10 1,5"
+         fill="solid"
+         id="polyline8741" />
+    </marker>
+  </defs>
+  <path
+     d="M 495.60219,260.7874 H 518.5387"
+     style="fill:none;stroke:#ff0000;stroke-width:2.38991;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-start:url(#marker14053);marker-end:url(#marker13821)"
+     id="path8746" />
+  <defs
+     id="defs8751">
+    <marker
+       id="startMarker53"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5">
+      <polyline
+         points="10,0 0,5 10,10 9,5"
+         fill="solid"
+         id="polyline8748" />
+    </marker>
+  </defs>
+  <defs
+     id="defs8756">
+    <marker
+       id="endMarker87"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="1"
+       refY="5">
+      <polyline
+         points="0,0 10,5 0,10 1,5"
+         fill="solid"
+         id="polyline8753" />
+    </marker>
+  </defs>
+  <path
+     d="m 495.47532,374.1732 h 20.9901"
+     style="fill:none;stroke:#0070c0;stroke-width:2.32299;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-start:url(#marker14689);marker-end:url(#marker14441)"
+     id="path8758" />
+  <text
+     x="526.86609"
+     y="264.78741"
+     id="text8762"><tspan
+       font-family="Calibri"
+       font-size="14px"
+       fill="#000000"
+       fill-opacity="1"
+       stroke-opacity="1"
+       id="tspan8760">DDR3</tspan></text>
+  <text
+     x="524.86609"
+     y="378.17319"
+     id="text8766"><tspan
+       font-family="Calibri"
+       font-size="14px"
+       fill="#000000"
+       fill-opacity="1"
+       stroke-opacity="1"
+       id="tspan8764">DDR_PS</tspan></text>
+  <path
+     d="m 224.6457,257.17786 v 83.70233"
+     style="fill:#008000;stroke:#404040;stroke-width:0.248026;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-start:url(#marker15154);marker-end:url(#marker14952)"
+     id="path8768" />
+  <g
+     id="Layer1951">
+    <g
+       id="Layer1952">
+      <defs
+         id="defs8776">
+        <linearGradient
+           id="grad637">
+          <stop
+             offset="0%"
+             stop-color="#00b050"
+             stop-opacity="1.0000"
+             id="stop8770" />
+          <stop
+             offset="100%"
+             stop-color="#009945"
+             stop-opacity="1.0000"
+             id="stop8772" />
+        </linearGradient>
+        <linearGradient
+           gradientTransform="scale(1.8439112,0.54232547)"
+           xlink:href="#grad637"
+           id="grad638"
+           x1="46.887669"
+           y1="525.19238"
+           x2="46.887669"
+           y2="551.32648"
+           gradientUnits="userSpaceOnUse" />
+      </defs>
+      <path
+         d="m 86.4567,298.9984 h 48.189 v -14.1732 h -48.189 z"
+         style="fill:url(#grad638);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+         id="path8778" />
+      <path
+         d="m 86.4567,298.9984 h 48.189 v -14.1732 h -48.189 z"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         id="path8780" />
+    </g>
+    <text
+       style="font-size:10.6667px"
+       x="90.106522"
+       y="294.96237"
+       id="text8785">Camera</text>
+  </g>
+  <g
+     id="Layer1953">
+    <g
+       id="Layer1954">
+      <defs
+         id="defs8794">
+        <linearGradient
+           id="grad639">
+          <stop
+             offset="0%"
+             stop-color="#00b050"
+             stop-opacity="1.0000"
+             id="stop8788" />
+          <stop
+             offset="100%"
+             stop-color="#009945"
+             stop-opacity="1.0000"
+             id="stop8790" />
+        </linearGradient>
+        <linearGradient
+           gradientTransform="scale(1.8439047,0.54232738)"
+           xlink:href="#grad639"
+           id="grad640"
+           x1="46.887836"
+           y1="551.32452"
+           x2="46.887836"
+           y2="577.45874"
+           gradientUnits="userSpaceOnUse" />
+      </defs>
+      <path
+         d="m 86.4567,313.1717 h 48.189 v -14.1733 h -48.189 z"
+         style="fill:url(#grad640);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+         id="path8796" />
+      <path
+         d="m 86.4567,313.1717 h 48.189 v -14.1733 h -48.189 z"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         id="path8798" />
+    </g>
+    <text
+       style="font-size:10.6667px"
+       x="89.507248"
+       y="309.13556"
+       id="text8803">Weights</text>
+  </g>
+  <g
+     id="Layer1955">
+    <g
+       id="Layer1956">
+      <defs
+         id="defs8812">
+        <linearGradient
+           id="grad641">
+          <stop
+             offset="0%"
+             stop-color="#00b050"
+             stop-opacity="1.0000"
+             id="stop8806" />
+          <stop
+             offset="100%"
+             stop-color="#009945"
+             stop-opacity="1.0000"
+             id="stop8808" />
+        </linearGradient>
+        <linearGradient
+           xlink:href="#grad641"
+           id="grad642"
+           x1="0"
+           y1="0"
+           x2="0"
+           y2="1"
+           gradientUnits="objectBoundingBox" />
+      </defs>
+      <path
+         d="m 86.4567,327.3449 h 48.189 v -14.1732 h -48.189 z"
+         style="fill:url(#grad642);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+         id="path8814" />
+      <path
+         d="m 86.4567,327.3449 h 48.189 v -14.1732 h -48.189 z"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         id="path8816" />
+    </g>
+    <text
+       style="font-size:8px"
+       x="86.456703"
+       y="322.2583"
+       id="text8821">Instructions</text>
+  </g>
+  <g
+     transform="translate(0,-8)"
+     id="Layer1959">
+    <g
+       id="Layer1960">
+      <defs
+         id="defs8848">
+        <linearGradient
+           id="grad645">
+          <stop
+             offset="0%"
+             stop-color="#00b050"
+             stop-opacity="1.0000"
+             id="stop8842" />
+          <stop
+             offset="100%"
+             stop-color="#009945"
+             stop-opacity="1.0000"
+             id="stop8844" />
+        </linearGradient>
+        <linearGradient
+           gradientTransform="scale(1.8439093,0.54232603)"
+           xlink:href="#grad645"
+           id="grad646"
+           x1="46.580273"
+           y1="687.32806"
+           x2="46.580273"
+           y2="713.46216"
+           gradientUnits="userSpaceOnUse" />
+      </defs>
+      <path
+         d="m 85.8898,386.9291 h 48.1889 V 372.7559 H 85.8898 Z"
+         style="fill:url(#grad646);fill-rule:evenodd;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+         id="path8850" />
+      <path
+         d="m 85.8898,386.9291 h 48.1889 V 372.7559 H 85.8898 Z"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         id="path8852" />
+    </g>
+    <text
+       style="font-size:10.6667px"
+       x="90.839256"
+       y="382.19269"
+       id="text8857">Display</text>
+  </g>
+  <defs
+     id="defs8863">
+    <marker
+       id="startMarker54"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5">
+      <polyline
+         points="10,0 0,5 10,10 9,5"
+         fill="solid"
+         id="polyline8860" />
+    </marker>
+  </defs>
+  <path
+     d="M 140.57218,372.7559 H 196.2992"
+     style="fill:none;stroke:#ff0000;stroke-width:1.42608;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-start:url(#startMarker54)"
+     id="path8865" />
+  <defs
+     id="defs8870">
+    <marker
+       id="startMarker55"
+       markerUnits="strokeWidth"
+       orient="auto"
+       markerWidth="8"
+       markerHeight="6"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5">
+      <polyline
+         points="10,0 0,5 10,10 9,5"
+         fill="solid"
+         id="polyline8867" />
+    </marker>
+  </defs>
+  <path
+     d="m 189.31922,352.9134 h -23.252 V 306.1417 H 134.6457"
+     style="fill:none;stroke:#404040;stroke-width:1.41254;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;marker-start:url(#startMarker55)"
+     id="path8872" />
+  <text
+     style="font-size:13.3333px"
+     x="81.700798"
+     y="258.6142"
+     id="text8876">Laptop</text>
+  <text
+     style="font-size:12px"
+     x="448.17319"
+     y="219.18111"
+     id="text8880">XC7Z100</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri"
+     x="278.25201"
+     y="221.18111"
+     id="text8884">S0_<tspan
+   id="tspan1557"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Calibri;-inkscape-font-specification:Calibri">AXI</tspan></text>
+  <text
+     style="font-size:10.6667px"
+     x="270.7402"
+     y="364.33069"
+     id="text8888">S1_AXI</text>
+  <text
+     style="font-size:10.66666667px;"
+     x="364.20471"
+     y="370"
+     id="text8892"><tspan
+       style="font-size:10.66666667px;"
+       font-family="Calibri"
+       font-size="8px"
+       fill="#0070c0"
+       fill-opacity="1"
+       stroke-opacity="1"
+       id="tspan8890">PS_AXI</tspan></text>
+  <text
+     style="font-size:12px;"
+     id="text8888-9"
+     y="303.19858"
+     x="226.40189"><tspan
+       id="tspan8886-2"
+       stroke-opacity="1"
+       fill-opacity="1"
+       fill="#ff0000"
+       font-size="8px"
+       font-family="Calibri"
+       style="fill:#00ff00;font-size:12px;">ctrl</tspan></text>
+</svg>

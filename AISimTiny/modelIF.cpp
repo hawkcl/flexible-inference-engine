@@ -1189,6 +1189,7 @@ void CModelIF::Run(GlobalInstruction *p, std::map<unsigned, void *> &out_mp, int
 
 	//weight and feature/instruction different memories, instructions can use a seperate memory too
 	//feature memory layout : internal features -> input feauture -> instructions (increasing addr)
+	/*
 	{
 		int fd = open("test.rv", O_WRONLY | O_CREAT, _S_IREAD | _S_IWRITE);
 		const int wt_sz = 32;
@@ -1282,7 +1283,7 @@ void CModelIF::Run(GlobalInstruction *p, std::map<unsigned, void *> &out_mp, int
 		write(fd, &addr, sizeof(addr));
 		write(fd, &sz, sizeof(sz));
 		close(fd);
-	}
+	}*/
 	if (DUMP_VERIFICATION_AXI){
 		int wt_sz = 32;
 		char filename[100];
