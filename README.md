@@ -1,5 +1,4 @@
-# Flexible Inference Engine
-### an effective deep learning accelerator for inference
+# Flexible Inference Engine - an effective deep learning accelerator for inference
 
 This project is about implementing a deep learning accelerator. I will describe each sub-project in chronological order.
 
